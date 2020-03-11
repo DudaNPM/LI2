@@ -1,0 +1,9 @@
+//LOGICA DO PROGRAMA
+#ifndef PROJETO_RASTROS_LOGICA_H
+#define PROJETO_RASTROS_LOGICA_H
+
+#include "dados.h"
+
+int jogar(ESTADO *e, COORDENADA c);
+
+#endif //PROJETO_RASTROS_LOGICA_H

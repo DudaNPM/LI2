@@ -1,0 +1,4 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug

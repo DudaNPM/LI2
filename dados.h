@@ -28,6 +28,7 @@ typedef JOGADA JOGADAS[32];
 
 typedef struct {
     CASA tab[8][8]; //Array de 8 elementos, em que cada elemento contem um array de 8 elementos do tipo CASA (0,1,2)
+    COORDENADA ultima_jogada;
     JOGADAS jogadas;
     int num_jogadas;
     int jogador_atual;

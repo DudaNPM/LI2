@@ -10,37 +10,14 @@
 void mostrar_tabuleiro(ESTADO *e)
 {
     int linha, coluna;
-
-    if (e->num_jogadas == 0)
-    {
-//8ª linha do tabuleiro
-        for (coluna = 1; coluna <= 7; coluna++) putchar('.');
-        putchar('2');
-        putchar('\n');
-
-//7ª e 6ª linha do tabuleiro
-        for (linha=7; linha >= 6; linha--)
-        {
-            for (coluna = 1; coluna <= 8; coluna++) putchar('.');
-            putchar('\n');
+    for (linha = 0; linha < 8; linha++){
+        for (coluna = 0; coluna < 8; coluna++){
+            if (coluna == 0 && linha == 7) printf("1  ");
+            else if (coluna == 7 && linha == 0) printf("2  ");
+            else if (e->tab[coluna][linha] == BRANCA) printf("*  ");
+            else if (e->tab[coluna][linha] == PRETA) printf("#  ");
+            else printf(".  ");
         }
-
-//5ª linha do tabuleiro (com a peca branca na posicao 'e5')
-        for (coluna = 1; coluna <= 4; coluna++) putchar('.');
-        putchar('*');
-        for (coluna = 6; coluna <= 8; coluna++) putchar('.');
-        putchar('\n');
-
-//4ª a 2ª linhas do tabuleiro
-        for (linha = 4; linha >= 2; linha--)
-        {
-            for (coluna = 1; coluna <= 8; coluna++) putchar('.');
-            putchar('\n');
-        }
-
-//1ª linha do tabuleiro
-        putchar('1');
-        for (coluna = 2; coluna <= 8; coluna++) putchar('.');
         putchar('\n');
     }
 }

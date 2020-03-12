@@ -9,8 +9,11 @@
 
 void mostrar_tabuleiro(ESTADO *e)
 {
-    int linha, coluna;
-    for (linha = 0; linha < 8; linha++){
+    int linha, coluna, i;
+    printf("     a  b  c  d  e  f  g  h\n");
+    printf("    __ __ __ __ __ __ __ __\n");
+    for (linha = i = 0; linha < 8; linha++, i++){
+        printf("%d  | ", i+1);
         for (coluna = 0; coluna < 8; coluna++){
             if (coluna == 0 && linha == 7) printf("1  ");
             else if (coluna == 7 && linha == 0) printf("2  ");

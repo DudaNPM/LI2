@@ -5,6 +5,7 @@
 
 int jogar(ESTADO *e, COORDENADA c)
 {
-    printf("jogar %d %d\n", c.coluna, c.linha);
+//Altera o estado da tabela de acordo com a coordenada 'c' (jogada) para BRANCA
+    e->tab[c.coluna][c.linha] = BRANCA;
     return 1;
 }

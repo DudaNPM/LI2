@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug"/>
+				<Option working_dir="/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug"/>
+				<Option working_dir="/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Projeto_Rastros">
-				<Option output="/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/Projeto_Rastros" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug"/>
+				<Option output="/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug/Projeto_Rastros" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -41,15 +41,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 Projeto_Rastros"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 Projeto_Rastros"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Projeto_Rastros/fast">
-				<Option output="/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/Projeto_Rastros" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug"/>
+				<Option output="/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug/Projeto_Rastros" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -61,45 +61,45 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 Projeto_Rastros/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 Projeto_Rastros/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug"/>
+				<Option working_dir="/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/dados.c">
+		<Unit filename="/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/dados.c">
 			<Option target="Projeto_Rastros"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/dados.h">
+		<Unit filename="/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/dados.h">
 			<Option target="Projeto_Rastros"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/interface.c">
+		<Unit filename="/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/interface.c">
 			<Option target="Projeto_Rastros"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/interface.h">
+		<Unit filename="/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/interface.h">
 			<Option target="Projeto_Rastros"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/logica.c">
+		<Unit filename="/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/logica.c">
 			<Option target="Projeto_Rastros"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/logica.h">
+		<Unit filename="/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/logica.h">
 			<Option target="Projeto_Rastros"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/main.c">
+		<Unit filename="/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/main.c">
 			<Option target="Projeto_Rastros"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/CMakeLists.txt">
+		<Unit filename="/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

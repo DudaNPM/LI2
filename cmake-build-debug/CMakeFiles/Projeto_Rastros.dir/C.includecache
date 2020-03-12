@@ -6,47 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/dados.c
+/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/dados.c
 stdlib.h
 -
 dados.h
-/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/dados.h
+/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/dados.h
 
-/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/dados.h
-
-/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/interface.c
-stdio.h
--
-stdlib.h
--
-string.h
--
-interface.h
-/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/interface.h
-dados.h
-/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/dados.h
-logica.h
-/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/logica.h
-
-/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/interface.h
-dados.h
-/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/dados.h
-
-/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/logica.c
-stdio.h
--
-logica.h
-/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/logica.h
-dados.h
-/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/dados.h
-
-/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/logica.h
-dados.h
-/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/dados.h
-
-/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/main.c
-dados.h
-/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/dados.h
-interface.h
-/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/interface.h
+/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/dados.h
 

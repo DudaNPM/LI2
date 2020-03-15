@@ -10,19 +10,23 @@
 void mostrar_tabuleiro(ESTADO *e)
 {
     int linha, coluna, i;
+
     printf("     a  b  c  d  e  f  g  h\n");
     printf("    __ __ __ __ __ __ __ __\n");
+
     for (linha = i = 0; linha < 8; linha++, i++){
         printf("%d  | ", i+1);
         for (coluna = 0; coluna < 8; coluna++){
             if (coluna == 0 && linha == 7) printf("1  ");
             else if (coluna == 7 && linha == 0) printf("2  ");
-            else if (e->tab[coluna][linha] == BRANCA) printf("*  ");
-            else if (e->tab[coluna][linha] == PRETA) printf("#  ");
+            else if (obter_estado_casa(e, (COORDENADA) {coluna,linha}) == BRANCA) printf("*  ");
+            else if (obter_estado_casa(e, (COORDENADA) {coluna,linha}) == PRETA) printf("#  ");
             else printf(".  ");
         }
         putchar('\n');
     }
+
+    putchar('\n');
 }
 
 

@@ -37,6 +37,11 @@ typedef struct {
 
 ESTADO *inicializar_estado();
 
+int obter_estado_casa(ESTADO *e, COORDENADA coord);
+
+int obter_jogador_atual(ESTADO *e);
+
+int obter_num_jogadas(ESTADO *e);
 
 
 

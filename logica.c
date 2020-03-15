@@ -3,9 +3,9 @@
 #include "logica.h"
 #include "dados.h"
 
-int jogar(ESTADO *e, COORDENADA c)
+//Altera o estado da tabela de acordo com a coordenada 'coord' (jogada) para BRANCA
+int jogar(ESTADO *e, COORDENADA coord)
 {
-//Altera o estado da tabela de acordo com a coordenada 'c' (jogada) para BRANCA
-    e->tab[c.coluna][c.linha] = BRANCA;
+    e->tab[coord.coluna][coord.linha] = BRANCA;
     return 1;
 }

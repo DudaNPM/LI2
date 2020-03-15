@@ -22,3 +22,16 @@ ESTADO *inicializar_estado(){
 
     return e;
 }
+
+
+int obter_estado_casa(ESTADO *e, COORDENADA coord){
+    return e->tab[coord.coluna][coord.linha];
+}
+
+int obter_jogador_atual(ESTADO *e){
+    return e->jogador_atual;
+}
+
+int obter_n_jogadas(ESTADO *e){
+    return e->num_jogadas;
+}

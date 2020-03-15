@@ -13,13 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5674a0a5-391c-42cb-824b-5cb03a81b46c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/dados.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/dados.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/interface.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/interface.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/logica.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/logica.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/main.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Projeto_Rastros" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Projeto_Rastros" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface.c" beforeDir="false" afterPath="$PROJECT_DIR$/interface.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logica.c" beforeDir="false" afterPath="$PROJECT_DIR$/logica.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +60,11 @@
       <workItem from="1583926801089" duration="23950000" />
       <workItem from="1583957706749" duration="43000" />
       <workItem from="1583965139180" duration="2050000" />
+      <workItem from="1584009927550" duration="1199000" />
+      <workItem from="1584038199735" duration="1364000" />
+      <workItem from="1584183706309" duration="6000" />
+      <workItem from="1584206704998" duration="1200000" />
+      <workItem from="1584222935357" duration="31000" />
     </task>
     <servers />
   </component>
@@ -74,30 +72,30 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1583972154351">
+    <state width="1493" height="258" key="GridCell.Tab.0.bottom" timestamp="1584222965521">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1583972154351" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1583972154351">
+    <state width="1493" height="258" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584222965521" />
+    <state width="1493" height="258" key="GridCell.Tab.0.center" timestamp="1584222965521">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1583972154351" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1583972154350">
+    <state width="1493" height="258" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1584222965521" />
+    <state width="1493" height="258" key="GridCell.Tab.0.left" timestamp="1584222965521">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1583972154350" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1583972154351">
+    <state width="1493" height="258" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1584222965521" />
+    <state width="1493" height="258" key="GridCell.Tab.0.right" timestamp="1584222965521">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1583972154351" />
+    <state width="1493" height="258" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1584222965521" />
     <state x="277" y="60" key="SettingsEditor" timestamp="1583926788994">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="277" y="60" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1583926788994" />
-    <state x="465" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1583926801991">
+    <state x="465" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1584222935032">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="465" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1583926801991" />
+    <state x="465" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1584222935032" />
     <state x="425" y="189" key="run.anything.popup" timestamp="1583940225436">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

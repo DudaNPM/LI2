@@ -43,6 +43,7 @@ void mostrar_prompt(ESTADO *e){
 int interpretador(ESTADO *e) {
     char linha[BUF_SIZE];
     char col[2], lin[2];
+    int result;
 
     mostrar_tabuleiro(e);
     mostrar_prompt(e);
@@ -52,12 +53,12 @@ int interpretador(ESTADO *e) {
 
     if(strlen(linha) == 3 && sscanf(linha, "%[a-h]%[1-8]", col, lin) == 2) {
         COORDENADA coord = {*col - 'a', *lin - '1'};
-        jogar(e, coord);
+        result = jogar(e, coord);
         putchar('\n');
         putchar('\n');
     }
 
     else printf("#Este valor não é uma jogada válida, tenta outra vez.\n\n\n");
 
-    return 1;
+    return result;
 }

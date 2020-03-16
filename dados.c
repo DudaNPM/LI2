@@ -11,14 +11,13 @@ ESTADO *inicializar_estado(){
     ESTADO *e = (ESTADO *) malloc(sizeof(ESTADO));
     e->jogador_atual = 1;
     e->num_jogadas = 0;
-    e->ultima_jogada = (COORDENADA) {4,3};
-    //e->jogadas = (JOGADAS){};
+    e->ultima_jogada = (COORDENADA) {4,4};
 
     for (linha = 0; linha < 8; linha++){
         for (coluna = 0; coluna < 8; coluna++)
             e->tab[coluna][linha] = VAZIO;
     }
-    e->tab[4][3] = BRANCA;
+    e->tab[4][4] = BRANCA;
 
     return e;
 }
@@ -32,6 +31,6 @@ int obter_jogador_atual(ESTADO *e){
     return e->jogador_atual;
 }
 
-int obter_n_jogadas(ESTADO *e){
+int obter_num_jogadas(ESTADO *e){
     return e->num_jogadas;
 }

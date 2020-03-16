@@ -6,6 +6,7 @@
 
 
 void mostrar_tabuleiro(ESTADO *e);
+void mostrar_prompt(ESTADO *e)
 int interpretador(ESTADO *e);
 
 #endif //PROJETO_RASTROS_INTERFACE_H

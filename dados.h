@@ -3,12 +3,10 @@
 #define PROJETO_RASTROS_DADOS_H
 
 
-typedef enum {VAZIO, BRANCA, PRETA} CASA;
-/*
-   Vazio = 0
-   Branca = 1
-   Preta = 2
-*/
+typedef enum {VAZIO,  // = 0
+              BRANCA, // = 1
+              PRETA   // = 2
+} CASA;
 
 
 typedef struct {
@@ -35,6 +33,12 @@ typedef struct {
 } ESTADO;
 
 
+typedef enum {OK,                 // = 0
+              JOGADA_INVALIDA,    // = 1
+              COORDENADA_INVALIDA // = 2
+} ERROS;
+
+
 ESTADO *inicializar_estado();
 
 int obter_estado_casa(ESTADO *e, COORDENADA coord);
@@ -42,6 +46,18 @@ int obter_estado_casa(ESTADO *e, COORDENADA coord);
 int obter_jogador_atual(ESTADO *e);
 
 int obter_num_jogadas(ESTADO *e);
+
+int casa_livre(ESTADO *e, COORDENADA coord);
+
+void atualiza_ultima_peca(ESTADO *e);
+
+void atualiza_nova_peca(ESTADO *e, COORDENADA coord);
+
+void atualiza_ultima_jogada(ESTADO *e, COORDENADA coord);
+
+void atualiza_jogador_atual(ESTADO *e);
+
+void atualiza_num_jogadas(ESTADO *e);
 
 
 

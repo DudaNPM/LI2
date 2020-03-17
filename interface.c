@@ -40,6 +40,19 @@ void mostrar_prompt(ESTADO *e){
 }
 
 
+void mostrar_erro(ERROS erro){
+    char *possiveis_erros[] = { "OK",
+                                "Jogada inválida, tenta outra vez.",
+                                "Coordenada inválida, tenta outra vez.",
+                              };
+    if (erro != OK) printf("%s\n\n\n", possiveis_erros[erro]);
+}
+
+void mostrar_vitoria(int jogador){
+    printf("Parabéns Player%d, ganhou este jogo!!!\n", jogador);
+}
+
+
 int interpretador(ESTADO *e) {
     char linha[BUF_SIZE];
     char col[2], lin[2];
@@ -58,7 +71,10 @@ int interpretador(ESTADO *e) {
         putchar('\n');
     }
 
-    else printf("#Este valor não é uma jogada válida, tenta outra vez.\n\n\n");
+    else if(strlen(linha) == 3 && sscanf(linha, "%[a-z]%[0-9]", col, lin) == 2)
+        mostrar_erro(COORDENADA_INVALIDA);
+
+    else printf("Este comando não é válido, tenta outra vez.\n\n\n");
 
     return result;
 }

@@ -1,0 +1,80 @@
+\hypertarget{logica_8h}{}\section{logica.\+h File Reference}
+\label{logica_8h}\index{logica.\+h@{logica.\+h}}
+{\ttfamily \#include \char`\"{}dados.\+h\char`\"{}}\newline
+Include dependency graph for logica.\+h\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{logica_8h_a521891400dc2dccd429b8fef56aee405}{validar\+\_\+vitoria} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} coord)
+\begin{DoxyCompactList}\small\item\em Verifica se algum dos jogadores ganhou o jogo. \end{DoxyCompactList}\item 
+int \hyperlink{logica_8h_a609d7d1c918d33c9acdc2c247c87f7a0}{validar\+\_\+jogada} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} coord)
+\begin{DoxyCompactList}\small\item\em Verifica a jogada é válida ou não. \end{DoxyCompactList}\item 
+int \hyperlink{logica_8h_ac313d7e553b1e2b5f266acb9bfff8141}{jogar} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} c)
+\begin{DoxyCompactList}\small\item\em Dá continuidade ao jogo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definição de funções que tratam da lógica do programa 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{logica_8h_ac313d7e553b1e2b5f266acb9bfff8141}\label{logica_8h_ac313d7e553b1e2b5f266acb9bfff8141}} 
+\index{logica.\+h@{logica.\+h}!jogar@{jogar}}
+\index{jogar@{jogar}!logica.\+h@{logica.\+h}}
+\subsubsection{\texorpdfstring{jogar()}{jogar()}}
+{\footnotesize\ttfamily int jogar (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}}]{c }\end{DoxyParamCaption})}
+
+
+
+Dá continuidade ao jogo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontador para o estado \\
+\hline
+{\em coord} & Apontador para a coordenada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Valor 0 se o jogo acabar, 1 caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{logica_8h_a609d7d1c918d33c9acdc2c247c87f7a0}\label{logica_8h_a609d7d1c918d33c9acdc2c247c87f7a0}} 
+\index{logica.\+h@{logica.\+h}!validar\+\_\+jogada@{validar\+\_\+jogada}}
+\index{validar\+\_\+jogada@{validar\+\_\+jogada}!logica.\+h@{logica.\+h}}
+\subsubsection{\texorpdfstring{validar\+\_\+jogada()}{validar\_jogada()}}
+{\footnotesize\ttfamily int validar\+\_\+jogada (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}}]{coord }\end{DoxyParamCaption})}
+
+
+
+Verifica a jogada é válida ou não. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontador para o estado \\
+\hline
+{\em coord} & Apontador para a coordenada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Valor 1 se a jogada for válida, 0 caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{logica_8h_a521891400dc2dccd429b8fef56aee405}\label{logica_8h_a521891400dc2dccd429b8fef56aee405}} 
+\index{logica.\+h@{logica.\+h}!validar\+\_\+vitoria@{validar\+\_\+vitoria}}
+\index{validar\+\_\+vitoria@{validar\+\_\+vitoria}!logica.\+h@{logica.\+h}}
+\subsubsection{\texorpdfstring{validar\+\_\+vitoria()}{validar\_vitoria()}}
+{\footnotesize\ttfamily int validar\+\_\+vitoria (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}}]{coord }\end{DoxyParamCaption})}
+
+
+
+Verifica se algum dos jogadores ganhou o jogo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontador para o estado \\
+\hline
+{\em coord} & Apontador para a coordenada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Valor 1 ou 2 consoante o jogador vencedor 
+\end{DoxyReturn}

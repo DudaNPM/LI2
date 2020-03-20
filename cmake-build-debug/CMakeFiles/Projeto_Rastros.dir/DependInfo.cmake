@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/dados.c" "/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/dados.c.o"
-  "/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/interface.c" "/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/interface.c.o"
-  "/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/logica.c" "/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/logica.c.o"
-  "/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/main.c" "/home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/main.c.o"
+  "/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/dados.c" "/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/dados.c.o"
+  "/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/interface.c" "/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/interface.c.o"
+  "/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/logica.c" "/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/logica.c.o"
+  "/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/main.c" "/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

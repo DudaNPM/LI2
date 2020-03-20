@@ -1,0 +1,158 @@
+\hypertarget{interface_8h}{}\section{interface.\+h File Reference}
+\label{interface_8h}\index{interface.\+h@{interface.\+h}}
+{\ttfamily \#include \char`\"{}dados.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for interface.\+h\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{interface_8h_a9d4089e067e9594d63c071cf21683119}{gravar\+\_\+tabuleiro} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, F\+I\+LE $\ast$fp)
+\begin{DoxyCompactList}\small\item\em Print do tabuleiro no ficheiro especifcado. \end{DoxyCompactList}\item 
+void \hyperlink{interface_8h_ad643153f333400daae8af43286ca8e02}{ler} (char ficheiro\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Print do tabuleiro, guardado em \char`\"{}ficheiro\char`\"{}, no ecrã \end{DoxyCompactList}\item 
+void \hyperlink{interface_8h_aa67634a66091443c84eba2753db4d87a}{gravar} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, char ficheiro\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Guarda o estado tabuleiro no ficheiro especifcado. \end{DoxyCompactList}\item 
+void \hyperlink{interface_8h_a2fb0566cfaa9cdfd5acd6f79a7806828}{mostrar\+\_\+erro} (\hyperlink{dados_8h_ab8d2e03f1be6ed043ab77a0ea6d0c3fd}{E\+R\+R\+OS} erro)
+\begin{DoxyCompactList}\small\item\em Print do erro cometido pelo jogador. \end{DoxyCompactList}\item 
+void \hyperlink{interface_8h_af2806892e401a01a7bc7f84cd65e4c99}{mostrar\+\_\+vitoria} (int jogador)
+\begin{DoxyCompactList}\small\item\em Print do jogador vencedor. \end{DoxyCompactList}\item 
+void \hyperlink{interface_8h_a1fd532d3d252ff42d406a15757e2a401}{mostrar\+\_\+prompt} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Print de um promt personalizado. \end{DoxyCompactList}\item 
+void \hyperlink{interface_8h_aa0b6c1689e60ac852a73d67e066c1df5}{mostrar\+\_\+tabuleiro} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Print do tabuleiro. \end{DoxyCompactList}\item 
+int \hyperlink{interface_8h_a24da95ebeede4a540e37790ce8be359b}{interpretador} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Leitura de comandos ou jogadas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definição de funções que tratam da interção ecrã/jogador 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{interface_8h_aa67634a66091443c84eba2753db4d87a}\label{interface_8h_aa67634a66091443c84eba2753db4d87a}} 
+\index{interface.\+h@{interface.\+h}!gravar@{gravar}}
+\index{gravar@{gravar}!interface.\+h@{interface.\+h}}
+\subsubsection{\texorpdfstring{gravar()}{gravar()}}
+{\footnotesize\ttfamily void gravar (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{char}]{ficheiro\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Guarda o estado tabuleiro no ficheiro especifcado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontador para o estado \\
+\hline
+{\em ficheiro} & Apontador para o nome do ficheiro \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_8h_a9d4089e067e9594d63c071cf21683119}\label{interface_8h_a9d4089e067e9594d63c071cf21683119}} 
+\index{interface.\+h@{interface.\+h}!gravar\+\_\+tabuleiro@{gravar\+\_\+tabuleiro}}
+\index{gravar\+\_\+tabuleiro@{gravar\+\_\+tabuleiro}!interface.\+h@{interface.\+h}}
+\subsubsection{\texorpdfstring{gravar\+\_\+tabuleiro()}{gravar\_tabuleiro()}}
+{\footnotesize\ttfamily void gravar\+\_\+tabuleiro (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{F\+I\+LE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+
+
+Print do tabuleiro no ficheiro especifcado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontador para o estado \\
+\hline
+{\em fp} & Apontador para o ficheiro \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_8h_a24da95ebeede4a540e37790ce8be359b}\label{interface_8h_a24da95ebeede4a540e37790ce8be359b}} 
+\index{interface.\+h@{interface.\+h}!interpretador@{interpretador}}
+\index{interpretador@{interpretador}!interface.\+h@{interface.\+h}}
+\subsubsection{\texorpdfstring{interpretador()}{interpretador()}}
+{\footnotesize\ttfamily int interpretador (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+Leitura de comandos ou jogadas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontador para o estado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O valor 1 se for para continuar o jogo, 0 caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_8h_ad643153f333400daae8af43286ca8e02}\label{interface_8h_ad643153f333400daae8af43286ca8e02}} 
+\index{interface.\+h@{interface.\+h}!ler@{ler}}
+\index{ler@{ler}!interface.\+h@{interface.\+h}}
+\subsubsection{\texorpdfstring{ler()}{ler()}}
+{\footnotesize\ttfamily void ler (\begin{DoxyParamCaption}\item[{char}]{ficheiro\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Print do tabuleiro, guardado em \char`\"{}ficheiro\char`\"{}, no ecrã 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ficheiro} & Apontador para o nome do ficherio \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_8h_a2fb0566cfaa9cdfd5acd6f79a7806828}\label{interface_8h_a2fb0566cfaa9cdfd5acd6f79a7806828}} 
+\index{interface.\+h@{interface.\+h}!mostrar\+\_\+erro@{mostrar\+\_\+erro}}
+\index{mostrar\+\_\+erro@{mostrar\+\_\+erro}!interface.\+h@{interface.\+h}}
+\subsubsection{\texorpdfstring{mostrar\+\_\+erro()}{mostrar\_erro()}}
+{\footnotesize\ttfamily void mostrar\+\_\+erro (\begin{DoxyParamCaption}\item[{\hyperlink{dados_8h_ab8d2e03f1be6ed043ab77a0ea6d0c3fd}{E\+R\+R\+OS}}]{erro }\end{DoxyParamCaption})}
+
+
+
+Print do erro cometido pelo jogador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em erro} & Apontador para o erro cometido \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_8h_a1fd532d3d252ff42d406a15757e2a401}\label{interface_8h_a1fd532d3d252ff42d406a15757e2a401}} 
+\index{interface.\+h@{interface.\+h}!mostrar\+\_\+prompt@{mostrar\+\_\+prompt}}
+\index{mostrar\+\_\+prompt@{mostrar\+\_\+prompt}!interface.\+h@{interface.\+h}}
+\subsubsection{\texorpdfstring{mostrar\+\_\+prompt()}{mostrar\_prompt()}}
+{\footnotesize\ttfamily void mostrar\+\_\+prompt (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+Print de um promt personalizado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontador para o estado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_8h_aa0b6c1689e60ac852a73d67e066c1df5}\label{interface_8h_aa0b6c1689e60ac852a73d67e066c1df5}} 
+\index{interface.\+h@{interface.\+h}!mostrar\+\_\+tabuleiro@{mostrar\+\_\+tabuleiro}}
+\index{mostrar\+\_\+tabuleiro@{mostrar\+\_\+tabuleiro}!interface.\+h@{interface.\+h}}
+\subsubsection{\texorpdfstring{mostrar\+\_\+tabuleiro()}{mostrar\_tabuleiro()}}
+{\footnotesize\ttfamily void mostrar\+\_\+tabuleiro (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+Print do tabuleiro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontador para o estado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_8h_af2806892e401a01a7bc7f84cd65e4c99}\label{interface_8h_af2806892e401a01a7bc7f84cd65e4c99}} 
+\index{interface.\+h@{interface.\+h}!mostrar\+\_\+vitoria@{mostrar\+\_\+vitoria}}
+\index{mostrar\+\_\+vitoria@{mostrar\+\_\+vitoria}!interface.\+h@{interface.\+h}}
+\subsubsection{\texorpdfstring{mostrar\+\_\+vitoria()}{mostrar\_vitoria()}}
+{\footnotesize\ttfamily void mostrar\+\_\+vitoria (\begin{DoxyParamCaption}\item[{int}]{jogador }\end{DoxyParamCaption})}
+
+
+
+Print do jogador vencedor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em jogador} & Apontador para o jogador vitorioso \\
+\hline
+\end{DoxyParams}

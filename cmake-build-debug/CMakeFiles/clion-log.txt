@@ -1,5 +1,5 @@
-/snap/clion/103/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/marcos/CLionProjects/trabalho/Li2_Rastros_2020
--- The C compiler identification is GNU 7.5.0
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020
+-- The C compiler identification is GNU 7.4.0
 -- Check for working C compiler: /usr/bin/cc
 -- Check for working C compiler: /usr/bin/cc -- works
 -- Detecting C compiler ABI info
@@ -8,4 +8,4 @@
 -- Detecting C compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/marcos/CLionProjects/trabalho/Li2_Rastros_2020/cmake-build-debug
+-- Build files have been written to: /mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug

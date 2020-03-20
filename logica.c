@@ -6,28 +6,6 @@
 #include "interface.h"
 
 
-int validar_jogada(ESTADO *e, COORDENADA coord){
-    int result = 0;
-    int coluna_atual = e->ultima_jogada.coluna;
-    int linha_atual = e->ultima_jogada.linha;
-    int coluna_jogada = coord.coluna;
-    int linha_jogada = coord.linha;
-    int x, y, z;
-
-    //Verifica se o jogador está a jogar para a vizinhaça da peça atual
-    x = abs(coluna_atual - coluna_jogada) <= 1 && abs(linha_atual - linha_jogada) <= 1;
-
-    //Verifica se a peça para a qual o jogador pretende jogar esta livre (VAZIO)
-    y = casa_livre(e, coord);
-
-    //Verifica se a coordenada jogada pelo jogador não coincide com a peça atual
-    z = coluna_atual != coluna_jogada || linha_atual != linha_jogada;
-
-    if (x && y && z) result = 1;
-    return result;
-}
-
-
 int validar_vitoria(ESTADO *e, COORDENADA coord){
     int coluna_jogada = coord.coluna;
     int linha_jogada = coord.linha;
@@ -99,6 +77,27 @@ int validar_vitoria(ESTADO *e, COORDENADA coord){
     return result;
 }
 
+
+int validar_jogada(ESTADO *e, COORDENADA coord){
+    int result = 0;
+    int coluna_atual = e->ultima_jogada.coluna;
+    int linha_atual = e->ultima_jogada.linha;
+    int coluna_jogada = coord.coluna;
+    int linha_jogada = coord.linha;
+    int x, y, z;
+
+    //Verifica se o jogador está a jogar para a vizinhaça da peça atual
+    x = abs(coluna_atual - coluna_jogada) <= 1 && abs(linha_atual - linha_jogada) <= 1;
+
+    //Verifica se a peça para a qual o jogador pretende jogar esta livre (VAZIO)
+    y = casa_livre(e, coord);
+
+    //Verifica se a coordenada jogada pelo jogador não coincide com a peça atual
+    z = coluna_atual != coluna_jogada || linha_atual != linha_jogada;
+
+    if (x && y && z) result = 1;
+    return result;
+}
 
 
 int jogar(ESTADO *e, COORDENADA coord){

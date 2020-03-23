@@ -24,6 +24,28 @@ A primeira função foi relativamente simples, uma vez que foi apenas necessári
 De seguida, foi tratada a função responsável por criar parte da interface do jogo (desenhar o tabuleiro no seu estado inicial) que através de ciclos faz print dos diversos caractéres correspondentes à peça branca("*"), às pecas pretas("#") e aos espacos vazios(".").
 Por fim, foram formadas 4 pequenas e simples funçóes. Uma para alterar e outra para obter o estado de uma certa casa do tabuleiro, outra que devolve o número de jogadas executadas até ao momento e uma outra que devolve o número do jogador que deve efetuar a próxima jogada.
 
+## 2ªSemana
 
+Na segunda semana as principais etapas foram:
+
+A criacao de um prompt que dá informação aos jogadores sobre:
+	-O números de jogadas já efetuadas até ao momento;
+	-O número do jogador a realizar a jogada;
+
+A implementação das jogadas: sendo este módulo dividido em 3 partes:
+
+	-Verificar se uma jogada é valida, tendo em conta o estado da casa para onde o jogador pretende jogar e também se esta se encontra na vizinhança da peça atual;
+        -Modificar as funções da semana anterior para que seja colocada uma peça preta na ultima posição da peça branca;
+        -Verificar se o jogo chegou ao fim, o que acabou por ser a função mais extença que fizemos, uma vez que esta cobre os casos:
+		-> a casa branca encontra-se no canto inferior esquerdo: ganha o jogador 1;
+         	-> a casa branca encontra-se no canto superior direito: ganha o jogador 2;
+		-> a jogada atual colocou a branca num sítio onde o próximo jogador não consegue jogar porque não há nenhuma casa vizinha livre: o jogador que colocou a branca ganhou;
+
+Por último chegou a parte de adicionar os comandos, onde surgiu o fator dificuldade, uma vez mais devido à falta de conhecimento sobre certas funções. Esta parte final
+levou à realização de três comandos:
+
+	-"Q", termina com o jogo;
+	-"gr nome_do_ficheiro", permite ao jogador criar um ficheiro e gravar no seu interior o estado atual do tabuleiro;
+	-"ler nome_do_ficheiro", permite ao jogador ver o estado do tabuleiro guardado no ficheiro em questão;
 
 

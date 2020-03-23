@@ -15,17 +15,14 @@ void gravar_tabuleiro(ESTADO *e, FILE *fp){
     int linha, coluna, i;
 
     fputc('\n', fp);
-    fprintf(fp, "            a  b  c  d  e  f  g  h\n");
-    fprintf(fp, "           __ __ __ __ __ __ __ __\n");
 
     for (linha = i = 7; linha >= 0; linha--, i--){
-        fprintf(fp, "       %d  | ", i+1);
         for (coluna = 0; coluna < 8; coluna++){
-            if (coluna == 0 && linha == 0) fprintf(fp, "1  ");
-            else if (coluna == 7 && linha == 7) fprintf(fp, "2  ");
-            else if (obter_estado_casa(e, (COORDENADA) {coluna,linha}) == BRANCA) fprintf(fp, "*  ");
-            else if (obter_estado_casa(e, (COORDENADA) {coluna,linha}) == PRETA) fprintf(fp, "#  ");
-            else fprintf(fp, ".  ");
+            if (coluna == 0 && linha == 0) fprintf(fp, "1");
+            else if (coluna == 7 && linha == 7) fprintf(fp, "2");
+            else if (obter_estado_casa(e, (COORDENADA) {coluna,linha}) == BRANCA) fprintf(fp, "*");
+            else if (obter_estado_casa(e, (COORDENADA) {coluna,linha}) == PRETA) fprintf(fp, "#");
+            else fprintf(fp, ".");
         }
         fputc('\n', fp);
     }

@@ -1,7 +1,18 @@
 #include <stdlib.h>
 #include "dados.h"
 
+void atualiza_jogadas(ESTADO *e, COORDENADA coord){
+    int i = e->jogador_atual;
 
+    if (i == 1){
+        e->jogadas[e->num_jogadas].jogador1.coluna = coord.coluna;
+        e->jogadas[e->num_jogadas].jogador1.linha = coord.linha;
+    }
+    else {
+        e->jogadas[e->num_jogadas].jogador2.coluna = coord.coluna;
+        e->jogadas[e->num_jogadas].jogador2.linha = coord.linha;
+    }
+}
 
 
 void atualiza_num_jogadas(ESTADO *e){

@@ -11,6 +11,39 @@ int controlo_comando = 0;
 int controlo_comando2 = 0;
 
 
+void movs(ESTADO *e) {
+    int jogador = obter_jogador_atual(e);
+    int jogadas = obter_num_jogadas(e);
+    int i;
+
+    for (i = 0; i < jogadas; i++) {
+
+        if (i < 9) printf("0%d: ", i + 1);
+        else printf("%d: ", i + 1);
+
+        int coluna = e->jogadas[i].jogador1.coluna + 'a';
+        int linha = e->jogadas[i].jogador1.linha + 1;
+        printf("%c%d ", coluna, linha);
+
+        int coluna2 = e->jogadas[i].jogador2.coluna + 'a';
+        int linha2 = e->jogadas[i].jogador2.linha + 1;
+        printf("%c%d", coluna2, linha2);
+
+        putchar('\n');
+    }
+
+    if (jogador == 2) {
+        if (jogadas < 9) printf("0%d: ", i + 1);
+        else printf("%d: ", i + 1);
+
+        int coluna = e->jogadas[i].jogador1.coluna + 'a';
+        int linha = e->jogadas[i].jogador1.linha + 1;
+        printf("%c%d ", coluna, linha);
+        putchar('\n');
+    }
+}
+
+
 void gravar_tabuleiro(ESTADO *e, FILE *fp){
     int linha, coluna, i;
 
@@ -104,6 +137,7 @@ int interpretador(ESTADO *e) {
     char col[2], lin[2];
     int result = 1;
     char quit[1];
+    char com_movs[4];
     char ficheiro[20];
 
 
@@ -128,6 +162,12 @@ int interpretador(ESTADO *e) {
         //O jogador usa o comando "Q" para sair do jogo
         if (sscanf(linha, "%[Q]", quit) == 1) {
             result = 0;
+        }
+        else if (sscanf(linha, "%[movs]", com_movs) == 1) {
+            putchar('\n');
+            movs(e);
+            putchar('\n');
+            controlo_comando2++;
         }
         //O jogador usa um comando inválido de 1 letra apenas
         else {

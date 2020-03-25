@@ -66,6 +66,8 @@ typedef enum {OK,                  // = 0
               COMANDO_INVALIDO     // = 3
 } ERROS;
 
+void atualiza_jogadas(ESTADO *e, COORDENADA coord);
+
 
 /**
 \brief Atualiza o numero de jogadas

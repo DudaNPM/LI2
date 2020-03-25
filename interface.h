@@ -10,6 +10,8 @@ Definição de funções que tratam da interção ecrã/jogador
 #include <stdio.h>
 
 
+void movs(ESTADO *e);
+
 /**
 \brief Print do tabuleiro no ficheiro especifcado
 @param e Apontador para o estado

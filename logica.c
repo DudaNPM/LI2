@@ -104,7 +104,8 @@ int jogar(ESTADO *e, COORDENADA coord){
     int valida = validar_jogada(e,coord);
     int vitoria = validar_vitoria(e,coord);
 
-    if (valida == 1) {  atualiza_jogador_atual(e); //Troca de jogador
+    if (valida == 1) {  atualiza_jogadas(e, coord);
+                        atualiza_jogador_atual(e); //Troca de jogador
                         atualiza_num_jogadas(e); //Controlo do numero de jogadas
                         atualiza_ultima_peca(e); //A peca que antes era BRANCA passa a ser PRETA
                         atualiza_nova_peca(e, coord); //A casa onde o jogador joga passa a ser BRANCA

@@ -44,6 +44,38 @@ void movs(ESTADO *e) {
 }
 
 
+void gravar_jogadas(ESTADO *e, FILE *fp){
+    int jogador = obter_jogador_atual(e);
+    int jogadas = obter_num_jogadas(e);
+    int i;
+
+    for (i = 0; i < jogadas; i++) {
+
+        if (i < 9) fprintf(fp, "0%d: ", i + 1);
+        else fprintf(fp, "%d: ", i + 1);
+
+        int coluna = e->jogadas[i].jogador1.coluna + 'a';
+        int linha = e->jogadas[i].jogador1.linha + 1;
+        fprintf(fp, "%c%d ", coluna, linha);
+
+        int coluna2 = e->jogadas[i].jogador2.coluna + 'a';
+        int linha2 = e->jogadas[i].jogador2.linha + 1;
+        fprintf(fp, "%c%d", coluna2, linha2);
+
+        fputc('\n', fp);
+    }
+
+    if (jogador == 2){
+        if (jogadas < 9) fprintf(fp, "0%d: ", i + 1);
+        else fprintf(fp, "%d: ", i + 1);
+
+        int coluna = e->jogadas[i].jogador1.coluna + 'a';
+        int linha = e->jogadas[i].jogador1.linha + 1;
+        fprintf(fp, "%c%d ", coluna, linha);
+    }
+}
+
+
 void gravar_tabuleiro(ESTADO *e, FILE *fp){
     int linha, coluna, i;
 
@@ -57,7 +89,7 @@ void gravar_tabuleiro(ESTADO *e, FILE *fp){
             else if (obter_estado_casa(e, (COORDENADA) {coluna,linha}) == PRETA) fprintf(fp, "#");
             else fprintf(fp, ".");
         }
-        fputc('\n', fp);
+        if (i != 0) fputc('\n', fp);
     }
 
     fputc('\n', fp);
@@ -67,20 +99,18 @@ void gravar_tabuleiro(ESTADO *e, FILE *fp){
 void gravar(ESTADO *e, char ficheiro[]){
     FILE *fPointer = fopen(ficheiro, "w");
     gravar_tabuleiro(e, fPointer);
+    fprintf(fPointer,"\n");
+    fputc('\n', fPointer);
+    gravar_jogadas(e, fPointer);
     fclose(fPointer);
 }
 
 
-void ler(char ficheiro[]){
+ESTADO *ler(char ficheiro[]){
     FILE *fPointer = fopen(ficheiro, "r");
-    char single_line[50];
-
-    while (!feof(fPointer)){
-        fgets(single_line, 50, fPointer);
-        puts(single_line);
-    }
-
+    ESTADO *e = atualiza_estado(fPointer);
     fclose(fPointer);
+    return e;
 }
 
 
@@ -163,12 +193,6 @@ int interpretador(ESTADO *e) {
         if (sscanf(linha, "%[Q]", quit) == 1) {
             result = 0;
         }
-        else if (sscanf(linha, "%[movs]", com_movs) == 1) {
-            putchar('\n');
-            movs(e);
-            putchar('\n');
-            controlo_comando2++;
-        }
         //O jogador usa um comando inválido de 1 letra apenas
         else {
             mostrar_erro(COMANDO_INVALIDO);
@@ -207,7 +231,12 @@ int interpretador(ESTADO *e) {
         }
         //O jogador introduz o comandos "ler"
         else if (sscanf(linha, "ler %s", ficheiro) == 1) {
-            ler(ficheiro);
+            interpretador(ler(ficheiro));
+        }
+        else if (sscanf(linha, "%[movs]", com_movs) == 1) {
+            putchar('\n');
+            movs(e);
+            putchar('\n');
             controlo_comando2++;
         }
         else {

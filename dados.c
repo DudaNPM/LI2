@@ -1,5 +1,36 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include "dados.h"
+
+
+ESTADO *atualiza_estado(FILE *fPointer){
+    char casa;
+    int coluna, linha, num_jogadas;
+    int x,y;
+
+    ESTADO *e = (ESTADO *) malloc(sizeof(ESTADO));
+    //for (linha = 1; linha < 9 || (casa = fgetc(fPointer)) != EOF; linha++){
+    //    for (coluna = -1; coluna < 7 || (casa = fgetc(fPointer)) != EOF; coluna++)
+    //        if (casa == '*') e->tab[coluna][linha] = BRANCA;
+    //        else if (casa == '#') e->tab[coluna][linha] = PRETA;
+    //        else e->tab[coluna][linha] = VAZIO;
+    //}
+
+    char line[20];
+
+    int counter = 0;
+    while ((casa = fgetc(fPointer)) != EOF) counter++;
+    if (counter%2 == 0) e->jogador_atual = 2;
+    else e->jogador_atual = 1;
+
+    counter = counter - 73;
+    e->num_jogadas = counter / 10;
+
+    //e->ultima_jogada = (COORDENADA) {4,4};
+
+    return e;
+}
+
 
 void atualiza_jogadas(ESTADO *e, COORDENADA coord){
     int i = e->jogador_atual;

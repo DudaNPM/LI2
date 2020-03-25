@@ -6,6 +6,7 @@ Definição do estado e das funções que o manipulam
 #ifndef ___DADOS_H___
 #define ___DADOS_H___
 
+#include <stdio.h>
 
 /**
 \brief Tipo de dados para a casa
@@ -65,6 +66,13 @@ typedef enum {OK,                  // = 0
               COORDENADA_INVALIDA, // = 2
               COMANDO_INVALIDO     // = 3
 } ERROS;
+
+/**
+\brief Atualiza o estado do jogo guardado num ficheiro
+@param fPointer Apontador para o ficheiro
+*/
+ESTADO *atualiza_estado(FILE *fPointer);
+
 
 void atualiza_jogadas(ESTADO *e, COORDENADA coord);
 

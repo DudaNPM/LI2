@@ -23,8 +23,9 @@ void gravar_tabuleiro(ESTADO *e, FILE *fp);
 /**
 \brief Print do tabuleiro, guardado em "ficheiro", no ecrã
 @param ficheiro Apontador para o nome do ficherio
+@return O estado que se encontrava no ficheiro
 */
-void ler(char ficheiro[]);
+ESTADO *ler(char ficheiro[]);
 
 
 /**

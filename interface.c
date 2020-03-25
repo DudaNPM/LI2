@@ -79,8 +79,6 @@ void gravar_jogadas(ESTADO *e, FILE *fp){
 void gravar_tabuleiro(ESTADO *e, FILE *fp){
     int linha, coluna, i;
 
-    fputc('\n', fp);
-
     for (linha = i = 7; linha >= 0; linha--, i--){
         for (coluna = 0; coluna < 8; coluna++){
             if (coluna == 0 && linha == 0) fprintf(fp, "1");
@@ -99,18 +97,16 @@ void gravar_tabuleiro(ESTADO *e, FILE *fp){
 void gravar(ESTADO *e, char ficheiro[]){
     FILE *fPointer = fopen(ficheiro, "w");
     gravar_tabuleiro(e, fPointer);
-    fprintf(fPointer,"\n");
     fputc('\n', fPointer);
     gravar_jogadas(e, fPointer);
     fclose(fPointer);
 }
 
 
-ESTADO *ler(char ficheiro[]){
+void ler(char ficheiro[], ESTADO *e){
     FILE *fPointer = fopen(ficheiro, "r");
-    ESTADO *e = atualiza_estado(fPointer);
+    atualiza_estado(fPointer, e);
     fclose(fPointer);
-    return e;
 }
 
 
@@ -231,7 +227,8 @@ int interpretador(ESTADO *e) {
         }
         //O jogador introduz o comandos "ler"
         else if (sscanf(linha, "ler %s", ficheiro) == 1) {
-            interpretador(ler(ficheiro));
+            ler(ficheiro, e);
+            result = 1;
         }
         else if (sscanf(linha, "%[movs]", com_movs) == 1) {
             putchar('\n');

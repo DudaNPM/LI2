@@ -3,32 +3,30 @@
 #include "dados.h"
 
 
-ESTADO *atualiza_estado(FILE *fPointer){
+void atualiza_estado(FILE *fPointer, ESTADO *e){
     char casa;
-    int coluna, linha, num_jogadas;
-    int x,y;
+    int coluna, linha;
+    char line[15];
 
-    ESTADO *e = (ESTADO *) malloc(sizeof(ESTADO));
-    //for (linha = 1; linha < 9 || (casa = fgetc(fPointer)) != EOF; linha++){
-    //    for (coluna = -1; coluna < 7 || (casa = fgetc(fPointer)) != EOF; coluna++)
-    //        if (casa == '*') e->tab[coluna][linha] = BRANCA;
-    //        else if (casa == '#') e->tab[coluna][linha] = PRETA;
-    //        else e->tab[coluna][linha] = VAZIO;
-    //}
-
-    char line[20];
+    for (linha = 7; linha >= 0; linha--){
+        fgets(line, 15, fPointer);
+        for (coluna = 0; coluna < 8; coluna++) {
+            if (line[coluna] == '*'){
+                e->tab[coluna][linha] = BRANCA;
+                e->ultima_jogada = (COORDENADA) {coluna, linha};
+            }
+            else if (line[coluna] == '#') e->tab[coluna][linha] = PRETA;
+            else e->tab[coluna][linha] = VAZIO;
+        }
+    }
 
     int counter = 0;
     while ((casa = fgetc(fPointer)) != EOF) counter++;
     if (counter%2 == 0) e->jogador_atual = 2;
     else e->jogador_atual = 1;
 
-    counter = counter - 73;
-    e->num_jogadas = counter / 10;
+    e->num_jogadas = (counter-1) / 10;
 
-    //e->ultima_jogada = (COORDENADA) {4,4};
-
-    return e;
 }
 
 

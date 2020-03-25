@@ -9,7 +9,10 @@ Definição de funções que tratam da interção ecrã/jogador
 #include "dados.h"
 #include <stdio.h>
 
-
+/**
+\brief Print das jogadas efetuadas
+@param e Apontador para o estado
+*/
 void movs(ESTADO *e);
 
 /**
@@ -21,11 +24,11 @@ void gravar_tabuleiro(ESTADO *e, FILE *fp);
 
 
 /**
-\brief Print do tabuleiro, guardado em "ficheiro", no ecrã
+\brief Lê o estado do tabuleiro e das jogadas no ficheiro em questão
 @param ficheiro Apontador para o nome do ficherio
-@return O estado que se encontrava no ficheiro
+@param e Apontador para o estado
 */
-ESTADO *ler(char ficheiro[]);
+void ler(char ficheiro[], ESTADO *e);
 
 
 /**

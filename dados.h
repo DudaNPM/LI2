@@ -67,13 +67,19 @@ typedef enum {OK,                  // = 0
               COMANDO_INVALIDO     // = 3
 } ERROS;
 
+
 /**
 \brief Atualiza o estado do jogo guardado num ficheiro
 @param fPointer Apontador para o ficheiro
 */
-ESTADO *atualiza_estado(FILE *fPointer);
+void atualiza_estado(FILE *fPointer, ESTADO *e);
 
 
+/**
+\brief Atualiza a lista de jogadas
+@param e Apontador para o estado
+@param coord Apontador para a última jogada
+*/
 void atualiza_jogadas(ESTADO *e, COORDENADA coord);
 
 

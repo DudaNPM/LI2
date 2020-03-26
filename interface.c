@@ -21,12 +21,12 @@ void movs(ESTADO *e) {
         if (i < 9) printf("0%d: ", i + 1);
         else printf("%d: ", i + 1);
 
-        int coluna = e->jogadas[i].jogador1.coluna + 'a';
-        int linha = e->jogadas[i].jogador1.linha + 1;
+        int coluna = obter_coluna(obter_coord(e, i, 1)) + 'a';
+        int linha = obter_linha(obter_coord(e, i, 1)) + 1;
         printf("%c%d ", coluna, linha);
 
-        int coluna2 = e->jogadas[i].jogador2.coluna + 'a';
-        int linha2 = e->jogadas[i].jogador2.linha + 1;
+        int coluna2 = obter_coluna(obter_coord(e, i, 2)) + 'a';
+        int linha2 = obter_linha(obter_coord(e, i, 2)) + 1;
         printf("%c%d", coluna2, linha2);
 
         putchar('\n');
@@ -36,8 +36,8 @@ void movs(ESTADO *e) {
         if (jogadas < 9) printf("0%d: ", i + 1);
         else printf("%d: ", i + 1);
 
-        int coluna = e->jogadas[i].jogador1.coluna + 'a';
-        int linha = e->jogadas[i].jogador1.linha + 1;
+        int coluna = obter_coluna(obter_coord(e, i, 1)) + 'a';
+        int linha = obter_linha(obter_coord(e, i, 1)) + 1;
         printf("%c%d ", coluna, linha);
         putchar('\n');
     }
@@ -54,12 +54,12 @@ void gravar_jogadas(ESTADO *e, FILE *fp){
         if (i < 9) fprintf(fp, "0%d: ", i + 1);
         else fprintf(fp, "%d: ", i + 1);
 
-        int coluna = e->jogadas[i].jogador1.coluna + 'a';
-        int linha = e->jogadas[i].jogador1.linha + 1;
+        int coluna = obter_coluna(obter_coord(e, i, 1)) + 'a';
+        int linha = obter_linha(obter_coord(e, i, 1)) + 1;
         fprintf(fp, "%c%d ", coluna, linha);
 
-        int coluna2 = e->jogadas[i].jogador2.coluna + 'a';
-        int linha2 = e->jogadas[i].jogador2.linha + 1;
+        int coluna2 = obter_coluna(obter_coord(e, i, 2)) + 'a';
+        int linha2 = obter_linha(obter_coord(e, i, 2)) + 1;
         fprintf(fp, "%c%d", coluna2, linha2);
 
         fputc('\n', fp);
@@ -69,8 +69,8 @@ void gravar_jogadas(ESTADO *e, FILE *fp){
         if (jogadas < 9) fprintf(fp, "0%d: ", i + 1);
         else fprintf(fp, "%d: ", i + 1);
 
-        int coluna = e->jogadas[i].jogador1.coluna + 'a';
-        int linha = e->jogadas[i].jogador1.linha + 1;
+        int coluna = obter_coluna(obter_coord(e, i, 1)) + 'a';
+        int linha = obter_linha(obter_coord(e, i, 1)) + 1;
         fprintf(fp, "%c%d ", coluna, linha);
     }
 }

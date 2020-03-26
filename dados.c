@@ -1,27 +1,26 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "dados.h"
-
+#define BUF_SIZE 1024
 
 void atualiza_estado(FILE *fPointer, ESTADO *e){
-    char casa;
     int coluna, linha;
-    char line[15];
+    char line[BUF_SIZE];
 
     for (linha = 7; linha >= 0; linha--){
-        fgets(line, 15, fPointer);
+        fgets(line, BUF_SIZE, fPointer);
         for (coluna = 0; coluna < 8; coluna++) {
             if (line[coluna] == '*'){
-                e->tab[coluna][linha] = BRANCA;
-                e->ultima_jogada = (COORDENADA) {coluna, linha};
+                atualiza_casa(e, (COORDENADA) {coluna, linha}, BRANCA);
+                atualiza_ultima_jogada(e, (COORDENADA) {coluna, linha});
             }
-            else if (line[coluna] == '#') e->tab[coluna][linha] = PRETA;
-            else e->tab[coluna][linha] = VAZIO;
+            else if (line[coluna] == '#') atualiza_casa(e, (COORDENADA) {coluna, linha}, PRETA);
+            else atualiza_casa(e, (COORDENADA) {coluna, linha}, VAZIO);
         }
     }
 
     int counter = 0;
-    while ((casa = fgetc(fPointer)) != EOF) counter++;
+    while (fgetc(fPointer)!= EOF) counter++;
     if (counter%2 == 0) e->jogador_atual = 2;
     else e->jogador_atual = 1;
 
@@ -62,13 +61,8 @@ void atualiza_ultima_jogada(ESTADO *e, COORDENADA coord){
 }
 
 
-void atualiza_nova_peca(ESTADO *e, COORDENADA coord){
-    e->tab[coord.coluna][coord.linha] = BRANCA;
-}
-
-
-void atualiza_ultima_peca(ESTADO *e){
-    e->tab[e->ultima_jogada.coluna][e->ultima_jogada.linha] = PRETA;
+void atualiza_casa(ESTADO *e, COORDENADA coord, CASA c){
+    e->tab[coord.coluna][coord.linha] = c;
 }
 
 
@@ -76,6 +70,27 @@ int casa_livre(ESTADO *e, COORDENADA coord){
     int result = 0;
     if (obter_estado_casa(e,coord) == VAZIO) result = 1;
     return result;
+}
+
+
+int obter_linha(COORDENADA coord){
+    return coord.linha;
+}
+
+
+int obter_coluna(COORDENADA coord){
+    return coord.coluna;
+}
+
+
+COORDENADA obter_coord(ESTADO *e, int i, int j){
+    if (j == 1) return e->jogadas[i].jogador1;
+    else return e->jogadas[i].jogador2;
+}
+
+
+COORDENADA obter_ultima_jogada(ESTADO *e){
+    return e->ultima_jogada;
 }
 
 

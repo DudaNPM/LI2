@@ -7,9 +7,9 @@
 
 
 int validar_vitoria(ESTADO *e, COORDENADA coord){
-    int coluna_jogada = coord.coluna;
-    int linha_jogada = coord.linha;
-    int jogador_atual = e->jogador_atual;
+    int coluna_jogada = obter_coluna(coord);
+    int linha_jogada = obter_linha(coord);
+    int jogador_atual = obter_jogador_atual(e);
     int result = 0;
 
     if (coluna_jogada == 7 && linha_jogada == 7) result = 2; //Canto superior direito
@@ -80,10 +80,10 @@ int validar_vitoria(ESTADO *e, COORDENADA coord){
 
 int validar_jogada(ESTADO *e, COORDENADA coord){
     int result = 0;
-    int coluna_atual = e->ultima_jogada.coluna;
-    int linha_atual = e->ultima_jogada.linha;
-    int coluna_jogada = coord.coluna;
-    int linha_jogada = coord.linha;
+    int coluna_atual = obter_coluna(obter_ultima_jogada(e));
+    int linha_atual = obter_linha(obter_ultima_jogada(e));
+    int coluna_jogada = obter_coluna(coord);
+    int linha_jogada = obter_linha(coord);
     int x, y, z;
 
     //Verifica se o jogador está a jogar para a vizinhaça da peça atual
@@ -103,12 +103,13 @@ int validar_jogada(ESTADO *e, COORDENADA coord){
 int jogar(ESTADO *e, COORDENADA coord){
     int valida = validar_jogada(e,coord);
     int vitoria = validar_vitoria(e,coord);
+    COORDENADA peca_branca = obter_ultima_jogada(e);
 
-    if (valida == 1) {  atualiza_jogadas(e, coord);
+    if (valida == 1) {  atualiza_jogadas(e, coord); //Controlo da informacao sobre as jogadas
                         atualiza_jogador_atual(e); //Troca de jogador
                         atualiza_num_jogadas(e); //Controlo do numero de jogadas
-                        atualiza_ultima_peca(e); //A peca que antes era BRANCA passa a ser PRETA
-                        atualiza_nova_peca(e, coord); //A casa onde o jogador joga passa a ser BRANCA
+                        atualiza_casa(e, peca_branca, PRETA); //A peca que antes era BRANCA passa a ser PRETA
+                        atualiza_casa(e, coord, BRANCA); //A casa onde o jogador joga passa a ser BRANCA
                         atualiza_ultima_jogada(e, coord); //A ultima jogada passa a ser a jogada acabada de efetuar
                      }
     else mostrar_erro(JOGADA_INVALIDA);

@@ -106,18 +106,12 @@ void atualiza_ultima_jogada(ESTADO *e, COORDENADA coord);
 
 
 /**
-\brief Muda o valor da casa de coordenadas coord para BRANCA
+\brief Atualiza o estado de uma casa
 @param e Apontador para o estado
 @param coord A coordenada
+@param c O novo estado da casa
 */
-void atualiza_nova_peca(ESTADO *e, COORDENADA coord);
-
-
-/**
-\brief Atualiza o estado da ultima peça jogada para PRETA
-@param e Apontador para o estado
-*/
-void atualiza_ultima_peca(ESTADO *e);
+void atualiza_casa(ESTADO *e, COORDENADA coord, CASA c);
 
 
 /**
@@ -127,6 +121,40 @@ void atualiza_ultima_peca(ESTADO *e);
 @returns O valor 1 se for VAZIO, 0 caso contrário
 */
 int casa_livre(ESTADO *e, COORDENADA coord);
+
+
+/**
+\brief Devolve a linha de uma determinada coordenada
+@param coord Coordenada em questão
+@returns O valor da linha
+*/
+int obter_linha(COORDENADA coord);
+
+
+/**
+\brief Devolve a coluna de uma determinada coordenada
+@param coord Coordenada em questão
+@returns O valor da coluna
+*/
+int obter_coluna(COORDENADA coord);
+
+
+/**
+\brief Devolve uma coordenada
+@param e Apontador para o estado
+@param i Índice onde se encontra a coordenada
+@param j Número do jogador que fez a jogada
+@returns Uma coordenada do arreio de Jogadas
+*/
+COORDENADA obter_coord(ESTADO *e, int i, int j);
+
+
+/**
+\brief Devolve as coordenadas da última jogada
+@param e Apontador para o estado
+@returns A última jogada
+*/
+COORDENADA obter_ultima_jogada(ESTADO *e);
 
 
 /**

@@ -48,7 +48,7 @@ levou à realização de três comandos:
 	-"gr nome_do_ficheiro", permite ao jogador criar um ficheiro e gravar no seu interior o estado atual do tabuleiro;
 	-"ler nome_do_ficheiro", permite ao jogador ver o estado do tabuleiro guardado no ficheiro em questão;
 	
-##3ªSemana
+## 3ªSemana
 
 
 Durante esta terceira fase do projeto foi-nos proposto:

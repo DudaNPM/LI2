@@ -30,9 +30,10 @@ Na segunda semana as principais etapas foram:
 
 A criacao de um prompt que dá informação aos jogadores sobre:
 
-  -O números de jogadas já efetuadas até ao momento;
   
-  -O número do jogador a realizar a jogada;
+   -O números de jogadas já efetuadas até ao momento;
+  
+   -O número do jogador a realizar a jogada;
 
 A implementação das jogadas: sendo este módulo dividido em 3 partes:
 

@@ -34,12 +34,12 @@ A criacao de um prompt que dá informação aos jogadores sobre:
 
 A implementação das jogadas: sendo este módulo dividido em 3 partes:
 
-	-Verificar se uma jogada é valida, tendo em conta o estado da casa para onde o jogador pretende jogar e também se esta se encontra na vizinhança da peça atual;
+	-Verificar se uma jogada é valida, tendo em conta o estado da casa para onde o jogador pretende jogar e também se esta se  encontra na vizinhança da peça atual;
         -Modificar as funções da semana anterior para que seja colocada uma peça preta na ultima posição da peça branca;
         -Verificar se o jogo chegou ao fim, o que acabou por ser a função mais extença que fizemos, uma vez que esta cobre os casos:
 		-> a casa branca encontra-se no canto inferior esquerdo: ganha o jogador 1;
          	-> a casa branca encontra-se no canto superior direito: ganha o jogador 2;
-		-> a jogada atual colocou a branca num sítio onde o próximo jogador não consegue jogar porque não há nenhuma casa vizinha livre: o jogador que colocou a branca ganhou;
+		-> a jogada atual colocou a branca num sítio onde o próximo jogador não consegue jogar porque não há nenhuma casa  vizinha livre: o jogador que colocou a branca ganhou;
 
 Por último chegou a parte de adicionar os comandos, onde surgiu o fator dificuldade, uma vez mais devido à falta de conhecimento sobre certas funções. Esta parte final
 levou à realização de três comandos:
@@ -47,5 +47,18 @@ levou à realização de três comandos:
 	-"Q", termina com o jogo;
 	-"gr nome_do_ficheiro", permite ao jogador criar um ficheiro e gravar no seu interior o estado atual do tabuleiro;
 	-"ler nome_do_ficheiro", permite ao jogador ver o estado do tabuleiro guardado no ficheiro em questão;
+	
+##3ªSemana
+
+
+Durante esta terceira fase do projeto foi-nos proposto:
+- Fazer melhorias nos comandos ”gr” e “ler”, de maneira a que estes guardem também, informações sobre as jogadas;
+- Criação do comando movs, que tem como objetivo listar as jogadas já feitas;
+
+
+Terminar o comando “gr” foi simples, uma vez que apenas precisamos de fazer com que, para além de gravar o tabuleiro, este também guardasse as jogadas efetuadas.
+Por outro lado, o comando “ler” mostrou-se um desafio pois o seu objetivo é dar procedimento a um jogo gravado a partir de um ficheiro. Isto implica que sejam recriados todos os elementos do estado do tabuleiro e da lista das jogadas, sendo utilizadas para a maioria dos casos estratégias que envolviam o número de caracteres do ficheiro.
+
+Por fim, o comando “movs” mostrou ser também uma tarefa simples. Para o funcionamento deste comando foi necessário a criação uma função auxiliar que, a cada jogada efetuada, atualiza o arreio JOGADAS de modo a que estas informações sejam mais tarde utilizadas no comando "movs".
 
 

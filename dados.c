@@ -7,6 +7,7 @@ void atualiza_estado(FILE *fPointer, ESTADO *e){
     int coluna, linha;
     char line[BUF_SIZE];
 
+
     for (linha = 7; linha >= 0; linha--){
         fgets(line, BUF_SIZE, fPointer);
         for (coluna = 0; coluna < 8; coluna++) {
@@ -19,13 +20,62 @@ void atualiza_estado(FILE *fPointer, ESTADO *e){
         }
     }
 
-    int counter = 0;
-    while (fgetc(fPointer)!= EOF) counter++;
-    if (counter%2 == 0) e->jogador_atual = 2;
-    else e->jogador_atual = 1;
 
-    e->num_jogadas = (counter-1) / 10;
+    char line2[BUF_SIZE];
+    int i = -1;
+    while (fgets(line2, BUF_SIZE, fPointer) != NULL) {
+        int num_jog;
+        char c1, c2;
+        int l1, l2;
+        int num_tokens = sscanf(line2, "%d: %c%d %c%d", &num_jog, &c1, &l1, &c2, &l2);
 
+        if(num_tokens == 5) {
+            set_num_jogadas(e, num_jog);
+            set_jogador_atual(e, 1);
+
+            COORDENADA coord1 = form_coord(c1, l1);
+            COORDENADA coord2 = form_coord(c2, l2);
+
+            set_jogadas(e, coord1, coord2, i);
+            i++;
+        }
+        else {
+            set_num_jogadas(e, num_jog - 1);
+            set_jogador_atual(e, 2);
+
+            COORDENADA coord1 = form_coord(c1, l1);
+            COORDENADA coord2 = {-1, -1};
+
+            set_jogadas(e, coord1, coord2, i);
+            i++;
+        }
+    }
+}
+
+
+COORDENADA form_coord(char coluna, int linha){
+    COORDENADA c;
+    c.coluna = coluna - 'a';
+    c.linha = linha - 1;
+    return c;
+}
+
+
+void set_jogadas(ESTADO *e, COORDENADA coord1, COORDENADA coord2, int i){
+    e->jogadas[i].jogador1.coluna = coord1.coluna;
+    e->jogadas[i].jogador1.linha = coord1.linha;
+    e->jogadas[i].jogador2.coluna = coord2.coluna;
+    e->jogadas[i].jogador2.linha = coord2.linha;
+}
+
+
+void set_num_jogadas(ESTADO *e, int n){
+    e->num_jogadas = n;
+}
+
+
+void set_jogador_atual(ESTADO *e, int n){
+    e->jogador_atual = n;
 }
 
 

@@ -50,28 +50,29 @@ void gravar_jogadas(ESTADO *e, FILE *fp){
     int i;
 
     for (i = 0; i < jogadas; i++) {
+        fputc('\n', fp);
 
         if (i < 9) fprintf(fp, "0%d: ", i + 1);
         else fprintf(fp, "%d: ", i + 1);
 
         int coluna = obter_coluna(obter_coord(e, i, 1)) + 'a';
         int linha = obter_linha(obter_coord(e, i, 1)) + 1;
-        fprintf(fp, "%c%d ", coluna, linha);
+        fprintf(fp, "%c%d", coluna, linha);
 
         int coluna2 = obter_coluna(obter_coord(e, i, 2)) + 'a';
         int linha2 = obter_linha(obter_coord(e, i, 2)) + 1;
-        fprintf(fp, "%c%d", coluna2, linha2);
-
-        fputc('\n', fp);
+        fprintf(fp, " %c%d", coluna2, linha2);
     }
 
     if (jogador == 2){
+        fputc('\n', fp);
+
         if (jogadas < 9) fprintf(fp, "0%d: ", i + 1);
         else fprintf(fp, "%d: ", i + 1);
 
         int coluna = obter_coluna(obter_coord(e, i, 1)) + 'a';
         int linha = obter_linha(obter_coord(e, i, 1)) + 1;
-        fprintf(fp, "%c%d ", coluna, linha);
+        fprintf(fp, "%c%d", coluna, linha);
     }
 }
 
@@ -97,7 +98,6 @@ void gravar_tabuleiro(ESTADO *e, FILE *fp){
 void gravar(ESTADO *e, char ficheiro[]){
     FILE *fPointer = fopen(ficheiro, "w");
     gravar_tabuleiro(e, fPointer);
-    fputc('\n', fPointer);
     gravar_jogadas(e, fPointer);
     fclose(fPointer);
 }

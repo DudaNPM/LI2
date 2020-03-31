@@ -69,6 +69,40 @@ typedef enum {OK,                  // = 0
 
 
 /**
+\brief Forma uma coordenada
+@param coluna A coluna
+@param linha A linha
+*/
+COORDENADA form_coord(char coluna, int linha);
+
+
+/**
+\brief Atualiza as informações sobre as jogadas
+@param e Apontador para o estado
+@param coord1 A coordenada do jogador 1
+@param coord2 A coordenada do jogador 2
+@param i Índice do arreio que contém informação sobre as jogadas
+*/
+void set_jogadas(ESTADO *e, COORDENADA coord1, COORDENADA coord2, int i);
+
+
+/**
+\brief Atualiza o número de jogadas
+@param e Apontador para o estado
+@param n O número de jogadas
+*/
+void set_num_jogadas(ESTADO *e, int n);
+
+
+/**
+\brief Atualiza o jogador atual
+@param e Apontador para o estado
+@param n O número do jogador atual
+*/
+void set_jogador_atual(ESTADO *e, int n);
+
+
+/**
 \brief Atualiza o estado do jogo guardado num ficheiro
 @param fPointer Apontador para o ficheiro
 */
@@ -78,7 +112,7 @@ void atualiza_estado(FILE *fPointer, ESTADO *e);
 /**
 \brief Atualiza a lista de jogadas
 @param e Apontador para o estado
-@param coord Apontador para a última jogada
+@param coord A última jogada
 */
 void atualiza_jogadas(ESTADO *e, COORDENADA coord);
 

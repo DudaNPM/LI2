@@ -9,6 +9,16 @@ Definição de funções que tratam da lógica do programa
 #include "dados.h"
 
 /**
+\brief Verifica se uma coordenada pertence ao arreio de jogadas
+@param e Apontador para o estado
+@param coord Apontador para a coordenada
+@param i O índice do arreio
+@returns Valor 1 se pertencer ao arreio, 0 caso contrário
+*/
+int pertence_as_jogadas(ESTADO *e, COORDENADA coord, int i);
+
+
+/**
 \brief Verifica se algum dos jogadores ganhou o jogo
 @param e Apontador para o estado
 @param coord Apontador para a coordenada

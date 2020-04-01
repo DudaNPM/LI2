@@ -5,10 +5,22 @@
 #define BUF_SIZE 1024
 #include "dados.h"
 #include "logica.h"
+#include "interface.h"
 
 
 int controlo_comando = 0;
 int controlo_comando2 = 0;
+
+
+void pos(ESTADO *e, int jogada){
+    int jog = e->num_jogadas;
+
+    if (jogada < jog) atualiza_estado2(e, jogada);
+    else {
+        mostrar_erro(JOGADA_INVALIDA);
+        controlo_comando2++;
+    }
+}
 
 
 void movs(ESTADO *e) {
@@ -50,7 +62,6 @@ void gravar_jogadas(ESTADO *e, FILE *fp){
     int i;
 
     for (i = 0; i < jogadas; i++) {
-        fputc('\n', fp);
 
         if (i < 9) fprintf(fp, "0%d: ", i + 1);
         else fprintf(fp, "%d: ", i + 1);
@@ -62,17 +73,19 @@ void gravar_jogadas(ESTADO *e, FILE *fp){
         int coluna2 = obter_coluna(obter_coord(e, i, 2)) + 'a';
         int linha2 = obter_linha(obter_coord(e, i, 2)) + 1;
         fprintf(fp, " %c%d", coluna2, linha2);
+
+        fputc('\n', fp);
     }
 
     if (jogador == 2){
-        fputc('\n', fp);
-
         if (jogadas < 9) fprintf(fp, "0%d: ", i + 1);
         else fprintf(fp, "%d: ", i + 1);
 
         int coluna = obter_coluna(obter_coord(e, i, 1)) + 'a';
         int linha = obter_linha(obter_coord(e, i, 1)) + 1;
         fprintf(fp, "%c%d", coluna, linha);
+
+        fputc('\n', fp);
     }
 }
 
@@ -98,6 +111,7 @@ void gravar_tabuleiro(ESTADO *e, FILE *fp){
 void gravar(ESTADO *e, char ficheiro[]){
     FILE *fPointer = fopen(ficheiro, "w");
     gravar_tabuleiro(e, fPointer);
+    fputc('\n', fPointer);
     gravar_jogadas(e, fPointer);
     fclose(fPointer);
 }
@@ -162,9 +176,9 @@ int interpretador(ESTADO *e) {
     char linha[BUF_SIZE];
     char col[2], lin[2];
     int result = 1;
-    char quit[1];
-    char com_movs[4];
-    char ficheiro[20];
+    char comando[BUF_SIZE];
+    int aux_comando[BUF_SIZE];
+    char ficheiro[BUF_SIZE];
 
 
     //O jogador escreveu um comando na jogada anterior, logo não faz sentido mostrar o tab novamente
@@ -186,7 +200,7 @@ int interpretador(ESTADO *e) {
     //O jogador introduz um comando
     if(strlen(linha) == 2) {
         //O jogador usa o comando "Q" para sair do jogo
-        if (sscanf(linha, "%[Q]", quit) == 1) {
+        if (sscanf(linha, "%[Q]", comando) == 1) {
             result = 0;
         }
         //O jogador usa um comando inválido de 1 letra apenas
@@ -230,11 +244,17 @@ int interpretador(ESTADO *e) {
             ler(ficheiro, e);
             result = 1;
         }
-        else if (sscanf(linha, "%[movs]", com_movs) == 1) {
+        //O jogador introduz o comandos "movs"
+        else if (sscanf(linha, "%[movs]", comando) == 1) {
             putchar('\n');
             movs(e);
             putchar('\n');
             controlo_comando2++;
+        }
+        //O jogador introduz o comandos "pos"
+        else if (sscanf(linha, "pos %d", aux_comando) == 1) {
+            pos(e, *aux_comando);
+            result = 1;
         }
         else {
             mostrar_erro(COMANDO_INVALIDO);

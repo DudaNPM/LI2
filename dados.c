@@ -1,16 +1,53 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "dados.h"
+#include "logica.h"
 #define BUF_SIZE 1024
+
+
+void atualiza_estado2(ESTADO *e, int jogada) {
+
+    set_jogador_atual(e, 1);
+
+    if (jogada != 0) {
+        COORDENADA coord = obter_coord(e, jogada - 1, 2);
+        set_ultima_jogada(e, coord);
+        set_num_jogadas(e, jogada);
+        atualiza_casa(e, coord, BRANCA);
+
+        int coluna, linha;
+        for (linha = 7; linha >= 0; linha--) {
+            for (coluna = 0; coluna <= 7; coluna++) {
+                if (!pertence_as_jogadas(e, (COORDENADA) {coluna, linha}, jogada))
+                    atualiza_casa(e, (COORDENADA) {coluna, linha}, VAZIO);
+            }
+        }
+        atualiza_casa(e, (COORDENADA) {4, 4}, PRETA);
+    }
+    else{
+        set_num_jogadas(e, jogada);
+        set_ultima_jogada(e, (COORDENADA) {4,4});
+
+        int coluna, linha;
+        for (linha = 7; linha >= 0; linha--) {
+            for (coluna = 0; coluna <= 7; coluna++) {
+                    atualiza_casa(e, (COORDENADA) {coluna, linha}, VAZIO);
+            }
+        }
+        atualiza_casa(e, (COORDENADA) {4, 4}, BRANCA);
+    }
+}
+
 
 void atualiza_estado(FILE *fPointer, ESTADO *e){
     int coluna, linha;
     char line[BUF_SIZE];
 
 
+    //Lê o tabuleiro
     for (linha = 7; linha >= 0; linha--){
         fgets(line, BUF_SIZE, fPointer);
-        for (coluna = 0; coluna < 8; coluna++) {
+        for (coluna = 0; coluna <= 7; coluna++) {
             if (line[coluna] == '*'){
                 atualiza_casa(e, (COORDENADA) {coluna, linha}, BRANCA);
                 atualiza_ultima_jogada(e, (COORDENADA) {coluna, linha});
@@ -21,6 +58,7 @@ void atualiza_estado(FILE *fPointer, ESTADO *e){
     }
 
 
+    //Lê as informações relativas às jogadas, o num_jogadas e o jog_atual
     char line2[BUF_SIZE];
     int i = -1;
     while (fgets(line2, BUF_SIZE, fPointer) != NULL) {
@@ -58,6 +96,11 @@ COORDENADA form_coord(char coluna, int linha){
     c.coluna = coluna - 'a';
     c.linha = linha - 1;
     return c;
+}
+
+
+void set_ultima_jogada(ESTADO *e, COORDENADA coord){
+    e->ultima_jogada = coord;
 }
 
 

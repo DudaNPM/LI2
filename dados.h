@@ -69,6 +69,21 @@ typedef enum {OK,                  // = 0
 
 
 /**
+\brief Atualiza a última jogada para uma coord específica
+@param e Apontador para o estado
+@param coord A coordenada
+*/
+void set_ultima_jogada(ESTADO *e, COORDENADA coord);
+
+/**
+\brief Atualiza o estado do jogo com base numa posição escolhida
+@param e Apontador para o estado
+@param jogada O número da jogada
+*/
+void atualiza_estado2(ESTADO *e, int jogada);
+
+
+/**
 \brief Forma uma coordenada
 @param coluna A coluna
 @param linha A linha

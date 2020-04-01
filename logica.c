@@ -6,6 +6,21 @@
 #include "interface.h"
 
 
+int pertence_as_jogadas(ESTADO *e, COORDENADA coord, int i){
+    int result = 0;
+    int x;
+
+    for (x = 0; x < i; x++){
+        if ((e->jogadas[x].jogador1.coluna == coord.coluna && e->jogadas[x].jogador1.linha == coord.linha )
+            ||
+            (e->jogadas[x].jogador2.coluna == coord.coluna && e->jogadas[x].jogador2.linha == coord.linha ))
+            result = 1;
+    }
+
+    return result;
+}
+
+
 int validar_vitoria(ESTADO *e, COORDENADA coord){
     int coluna_jogada = obter_coluna(coord);
     int linha_jogada = obter_linha(coord);

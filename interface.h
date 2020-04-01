@@ -9,6 +9,15 @@ Definição de funções que tratam da interção ecrã/jogador
 #include "dados.h"
 #include <stdio.h>
 
+
+/**
+\brief Permite aceder a uma jogada anterior
+@param e Apontador para o estado
+@param jogada A jogada a qual se pertende aceder
+*/
+void pos(ESTADO *e, int jogada);
+
+
 /**
 \brief Print das jogadas efetuadas
 @param e Apontador para o estado

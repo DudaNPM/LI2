@@ -53,7 +53,6 @@ levou à realização de três comandos:
 	
 ## 3ªSemana
 
-
 Durante esta terceira fase do projeto foi-nos proposto:
 - Fazer melhorias nos comandos ”gr” e “ler”, de maneira a que estes guardem também, informações sobre as jogadas;
 - Criação do comando movs, que tem como objetivo listar as jogadas já feitas;
@@ -64,4 +63,8 @@ Por outro lado, o comando “ler” mostrou-se um desafio pois o seu objetivo é
 
 Por fim, o comando “movs” mostrou ser também uma tarefa simples. Para o funcionamento deste comando foi necessário a criação uma função auxiliar que, a cada jogada efetuada, atualiza o arreio JOGADAS de modo a que estas informações sejam mais tarde utilizadas no comando "movs".
 
+## 4ªSemana
 
+O trabalho relativo a esta semana do projeto foi simplesmente a implementação do comando "pos". A execução deste novo comando, que recebe apenas um argumento (uma jogada) deve permitir ao utilizador aceder a uma jogada anterior.
+
+O principal desafio deste comando foi, mais uma vez, a criação de uma função que alterasse o estado do jogo mas, que não se mostrou ser muito complicada. Para tal, tivemos em consideração as jogadas que já tinham sido feitas até à jogada passada como argumento e apartir dessa informação "recriou-se" o estado do tabuleiro, assim como, o do arreio de jogadas e as informações acerca dos jogadores.

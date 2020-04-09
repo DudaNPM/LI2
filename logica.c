@@ -1,7 +1,5 @@
 //LOGICA DO PROGRAMA
-#include <stdio.h>
 #include <stdlib.h>
-#include "logica.h"
 #include "dados.h"
 #include "interface.h"
 

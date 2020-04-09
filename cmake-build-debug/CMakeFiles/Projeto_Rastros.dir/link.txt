@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/Projeto_Rastros.dir/main.c.o CMakeFiles/Projeto_Rastros.dir/dados.c.o CMakeFiles/Projeto_Rastros.dir/logica.c.o CMakeFiles/Projeto_Rastros.dir/interface.c.o  -o Projeto_Rastros 
+/usr/bin/cc -g   CMakeFiles/Projeto_Rastros.dir/main.c.o CMakeFiles/Projeto_Rastros.dir/dados.c.o CMakeFiles/Projeto_Rastros.dir/logica.c.o CMakeFiles/Projeto_Rastros.dir/interface.c.o CMakeFiles/Projeto_Rastros.dir/listas.c.o  -o Projeto_Rastros 

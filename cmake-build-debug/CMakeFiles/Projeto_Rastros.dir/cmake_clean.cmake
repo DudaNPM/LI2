@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Projeto_Rastros.dir/dados.c.o"
   "CMakeFiles/Projeto_Rastros.dir/logica.c.o"
   "CMakeFiles/Projeto_Rastros.dir/interface.c.o"
+  "CMakeFiles/Projeto_Rastros.dir/listas.c.o"
   "Projeto_Rastros.pdb"
   "Projeto_Rastros"
 )

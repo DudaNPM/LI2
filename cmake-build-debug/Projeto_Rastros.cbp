@@ -90,6 +90,12 @@
 		<Unit filename="/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/interface.h">
 			<Option target="Projeto_Rastros"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/listas.c">
+			<Option target="Projeto_Rastros"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/listas.h">
+			<Option target="Projeto_Rastros"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/logica.c">
 			<Option target="Projeto_Rastros"/>
 		</Unit>

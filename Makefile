@@ -4,7 +4,7 @@ start_game: main.o logica.o listas.o interface.o dados.o
 main.o: main.c dados.h interface.h
 	gcc -c main.c
 
-logica.o: logica.c dados.h interface.h
+logica.o: logica.c dados.h interface.h listas.h
 	gcc -c logica.c
 
 listas.o: listas.c listas.h

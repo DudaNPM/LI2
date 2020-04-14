@@ -1,15 +1,23 @@
 //CAMADA DA INTERFACE
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-#define BUF_SIZE 1024
 #include "dados.h"
 #include "logica.h"
 #include "interface.h"
+#define BUF_SIZE 1024
 
 
 int controlo_comando = 0;
 int controlo_comando2 = 0;
+
+
+int jog(ESTADO *e){
+
+    //Escolhe uma jogada aleatória
+    COORDENADA nova = escolha_aleatoria(e);
+
+    return jogar(e,nova);
+}
 
 
 void pos(ESTADO *e, int jogada){
@@ -255,6 +263,10 @@ int interpretador(ESTADO *e) {
         else if (sscanf(linha, "pos %d", aux_comando) == 1) {
             pos(e, *aux_comando);
             result = 1;
+        }
+        //O jogador introduz o comandos "jog"
+        else if (sscanf(linha, "%[jog]", comando) == 1) {
+            result = jog(e);
         }
         else {
             mostrar_erro(COMANDO_INVALIDO);

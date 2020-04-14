@@ -9,6 +9,13 @@ Definição de funções que tratam da interção ecrã/jogador
 #include "dados.h"
 #include <stdio.h>
 
+/**
+\brief Permitir que o jogador atual peça ao computador para jogar por si
+@param e Apontador para o estado
+@return 1 caso o jogo não tenha terminado, 0 caso contrário
+*/
+int jog(ESTADO *e);
+
 
 /**
 \brief Permite aceder a uma jogada anterior

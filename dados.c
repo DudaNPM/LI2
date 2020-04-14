@@ -161,7 +161,10 @@ void atualiza_casa(ESTADO *e, COORDENADA coord, CASA c){
 
 int casa_livre(ESTADO *e, COORDENADA coord){
     int result = 0;
-    if (obter_estado_casa(e,coord) == VAZIO) result = 1;
+    if (coord.coluna >= 0 && coord.coluna <= 7 &&
+        coord.linha  >= 0 && coord.linha  <= 7 &&
+        obter_estado_casa(e,coord) == VAZIO      )
+        result = 1;
     return result;
 }
 

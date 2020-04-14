@@ -7,6 +7,24 @@ Definição de funções que tratam da lógica do programa
 #define ___LOGICA_H___
 
 #include "dados.h"
+#include "listas.h"
+
+/**
+\brief Escolhe uma CASA livre na vizinhança da peça branca
+@param e Apontador para o estado
+@returns Coordenada aleatória
+*/
+COORDENADA escolha_aleatoria(ESTADO *e);
+
+
+/**
+\brief Verifica se as casas em volta da peça branca estão livres
+@param e Apontador para o estado
+@param coord Apontador para a coordenada
+@returns Lista com as casas livres
+*/
+LISTA armaneza_pos_viz(ESTADO *e, COORDENADA coord);
+
 
 /**
 \brief Verifica se uma coordenada pertence ao arreio de jogadas

@@ -1,7 +1,63 @@
 //LOGICA DO PROGRAMA
 #include <stdlib.h>
+#include <time.h>
 #include "dados.h"
 #include "interface.h"
+#include "listas.h"
+#include "logica.h"
+
+
+COORDENADA escolha_aleatoria(ESTADO *e){
+
+    //Posição da peça branca
+    COORDENADA pos_atual = obter_ultima_jogada(e);
+
+    //Lista com as posições vizinhas da peça branca livres
+    LISTA a = armaneza_pos_viz(e, pos_atual);
+    int comp = length(a);
+
+    //Indice aleatorio para a escolha da coordenada
+    srandom(time(NULL));
+    int s = (rand() % comp);
+
+    //Lista com as posições vizinhas da peça branca livres
+    LISTA b = armaneza_pos_viz(e, pos_atual);
+    while (s > 0){
+        b = proximo(b);
+        s--;
+    }
+
+    COORDENADA *c = (COORDENADA *) devolve_cabeca(b);
+
+    return *c;
+}
+
+
+LISTA armaneza_pos_viz(ESTADO *e, COORDENADA coord){
+    LISTA L = criar_lista();
+    int coluna = obter_coluna(coord);
+    int linha = obter_linha(coord);
+    int c = coluna, l = linha;
+
+    // 3 casas de cima da peça branca
+    if (casa_livre(e, (COORDENADA) {c-1,l+1})) L = insere_cabeca(L, &((COORDENADA) {c-1,l+1}));
+    if (casa_livre(e, (COORDENADA) {c,l+1})) L = insere_cabeca(L, &((COORDENADA) {c,l+1}));
+    if (casa_livre(e, (COORDENADA) {c+1,l+1})) L = insere_cabeca(L, &((COORDENADA) {c+1,l+1}));
+
+    // Casa do lado direito da peça branca
+    if (casa_livre(e, (COORDENADA) {c+1,l})) L = insere_cabeca(L, &((COORDENADA) {c+1,l}));
+
+    // 3 casas de baixo da peça branca
+    if (casa_livre(e, (COORDENADA) {c+1,l-1})) L = insere_cabeca(L, &((COORDENADA) {c+1,l-1}));
+    if (casa_livre(e, (COORDENADA) {c,l-1})) L = insere_cabeca(L, &((COORDENADA) {c,l-1}));
+    if (casa_livre(e, (COORDENADA) {c-1,l-1})) L = insere_cabeca(L, &((COORDENADA) {c-1,l-1}));
+
+    // Casa do lado esquerdo da peça branca
+    if (casa_livre(e, (COORDENADA) {c-1,l})) L = insere_cabeca(L, &((COORDENADA) {c-1,l}));
+
+
+    return L;
+}
 
 
 int pertence_as_jogadas(ESTADO *e, COORDENADA coord, int i){

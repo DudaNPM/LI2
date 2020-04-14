@@ -5,5 +5,4 @@ int main() {
     ESTADO *e = inicializar_estado();
     while(interpretador(e));
     return 0;
-    // teste
 }

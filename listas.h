@@ -13,6 +13,14 @@ typedef struct nodo {
 
 
 /**
+\brief Calcula o comprimento de uma lista
+@param L A lista
+@returns O comprimento
+*/
+int length(LISTA L);
+
+
+/**
 \brief Cria uma lista vazia
 @returns Uma lista vazia
 */

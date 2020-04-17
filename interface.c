@@ -9,6 +9,7 @@
 
 int controlo_comando = 0;
 int controlo_comando2 = 0;
+int maior_num_jogadas = 0;
 
 
 int jog(ESTADO *e){
@@ -20,10 +21,13 @@ int jog(ESTADO *e){
 }
 
 
-void pos(ESTADO *e, int jogada){
+void pos(ESTADO *e, int jogada, int maior_jogada){
     int jog = e->num_jogadas;
 
-    if (jogada < jog) atualiza_estado2(e, jogada);
+    if (jog >= maior_jogada) maior_num_jogadas = jog;
+
+    if (jogada <= maior_num_jogadas && jogada <= jog) atualiza_estado2(e, jogada);
+    else if (jogada <= maior_num_jogadas || jogada >= jog) atualiza_estado3(e, jogada);
     else {
         mostrar_erro(JOGADA_INVALIDA);
         controlo_comando2++;
@@ -261,7 +265,7 @@ int interpretador(ESTADO *e) {
         }
         //O jogador introduz o comandos "pos"
         else if (sscanf(linha, "pos %d", aux_comando) == 1) {
-            pos(e, *aux_comando);
+            pos(e, *aux_comando, maior_num_jogadas);
             result = 1;
         }
         //O jogador introduz o comandos "jog"

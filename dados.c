@@ -5,6 +5,40 @@
 #define BUF_SIZE 1024
 
 
+void atualiza_estado3(ESTADO *e, int jogada) {
+
+    COORDENADA c1 = obter_coord(e, jogada-1, 1);
+    COORDENADA c2 = obter_coord(e, jogada-1, 2);
+
+
+    if (c2.linha == 0 && c2.coluna == 0){
+        printf("%d", 2);
+        set_jogador_atual(e, 2);
+        set_ultima_jogada(e, c1);
+        set_num_jogadas(e, jogada - 1);
+        atualiza_casa(e, c1, BRANCA);
+    }
+    else{
+        set_jogador_atual(e, 1);
+        set_ultima_jogada(e, c2);
+        set_num_jogadas(e, jogada);
+        atualiza_casa(e, c1, PRETA);
+        atualiza_casa(e, c2, BRANCA);
+
+    }
+
+    int coluna, linha;
+    for (linha = 7; linha >= 0; linha--) {
+        for (coluna = 0; coluna <= 7; coluna++) {
+            if (pertence_as_jogadas(e, (COORDENADA) {coluna, linha}, jogada - 1))
+                atualiza_casa(e, (COORDENADA) {coluna, linha}, PRETA);
+        }
+    }
+
+    atualiza_casa(e, (COORDENADA) {4, 4}, PRETA);
+}
+
+
 void atualiza_estado2(ESTADO *e, int jogada) {
 
     set_jogador_atual(e, 1);

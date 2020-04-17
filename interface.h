@@ -21,8 +21,9 @@ int jog(ESTADO *e);
 \brief Permite aceder a uma jogada anterior
 @param e Apontador para o estado
 @param jogada A jogada a qual se pertende aceder
+@param maior_num_jogadas O número da maior jogada atingida
 */
-void pos(ESTADO *e, int jogada);
+void pos(ESTADO *e, int jogada, int maior_num_jogadas);
 
 
 /**

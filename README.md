@@ -68,3 +68,11 @@ Por fim, o comando “movs” mostrou ser também uma tarefa simples. Para o fun
 O trabalho relativo a esta semana do projeto foi simplesmente a implementação do comando "pos". A execução deste novo comando, que recebe apenas um argumento (uma jogada) deve permitir ao utilizador aceder a uma jogada anterior.
 
 O principal desafio deste comando foi, mais uma vez, a criação de uma função que alterasse o estado do jogo mas, que não se mostrou ser muito complicada. Para tal, tivemos em consideração as jogadas que já tinham sido feitas até à jogada passada como argumento e apartir dessa informação "recriou-se" o estado do tabuleiro, assim como, o do arreio de jogadas e as informações acerca dos jogadores.
+
+
+## 5ªSemana
+
+Neste novo guião foi-nos proposto a criação de um módulo de listas ligadas genérico e, para alim disso, a implementação do comando "jog".
+A este novo módulo foram acrescentadas várias simples funcões acerca de listas para mais tarde serem usadas no novo comando. Este deve permitir que o jogador atual peça ao computador para jogar por si. Para tal foram-nos fornecidas várias heurísticas da qual foi escolhida a Escolha aleatória.
+
+A estratégia utilizada para a construção desta heurística, baseia-se em calcular o número de casas livres(N) em volta da posição atual do jogador e, posteriormente, utilizá-lo para formação de um número aleatório entre 0 e N. Apartir deste, basta apenas escolher a possível jogada a efetuar.

@@ -19,10 +19,9 @@ CMakeFiles/Projeto_Rastros.dir/logica.c.o: ../dados.h
 CMakeFiles/Projeto_Rastros.dir/logica.c.o: ../interface.h
 CMakeFiles/Projeto_Rastros.dir/logica.c.o: ../listas.h
 CMakeFiles/Projeto_Rastros.dir/logica.c.o: ../logica.c
+CMakeFiles/Projeto_Rastros.dir/logica.c.o: ../logica.h
 
 CMakeFiles/Projeto_Rastros.dir/main.c.o: ../dados.h
 CMakeFiles/Projeto_Rastros.dir/main.c.o: ../interface.h
-CMakeFiles/Projeto_Rastros.dir/main.c.o: ../listas.h
-CMakeFiles/Projeto_Rastros.dir/main.c.o: ../logica.h
 CMakeFiles/Projeto_Rastros.dir/main.c.o: ../main.c
 

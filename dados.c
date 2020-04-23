@@ -12,7 +12,6 @@ void atualiza_estado3(ESTADO *e, int jogada) {
 
 
     if (c2.linha == 0 && c2.coluna == 0){
-        printf("%d", 2);
         set_jogador_atual(e, 2);
         set_ultima_jogada(e, c1);
         set_num_jogadas(e, jogada - 1);

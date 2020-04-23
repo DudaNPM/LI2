@@ -23,8 +23,6 @@ stdio.h
 /mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/interface.c
 stdio.h
 -
-stdlib.h
--
 string.h
 -
 dados.h
@@ -51,12 +49,18 @@ stdlib.h
 /mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/logica.c
 stdlib.h
 -
+time.h
+-
+math.h
+-
 dados.h
 /mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/dados.h
 interface.h
 /mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/interface.h
 listas.h
 /mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/listas.h
+logica.h
+/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/logica.h
 
 /mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/logica.h
 dados.h
@@ -69,8 +73,4 @@ dados.h
 /mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/dados.h
 interface.h
 /mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/interface.h
-listas.h
-/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/listas.h
-logica.h
-/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/logica.h
 

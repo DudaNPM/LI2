@@ -12,6 +12,15 @@ int controlo_comando2 = 0;
 int maior_num_jogadas = 0;
 
 
+int jog2(ESTADO *e){
+
+    //Escolhe a jogada para a casa mais próxima do objetivo
+    COORDENADA nova = distancia_euclidiana(e);
+
+    return jogar(e,nova);
+}
+
+
 int jog(ESTADO *e){
 
     //Escolhe uma jogada aleatória
@@ -257,7 +266,7 @@ int interpretador(ESTADO *e) {
             result = 1;
         }
         //O jogador introduz o comandos "movs"
-        else if (sscanf(linha, "%[movs]", comando) == 1) {
+        else if (strcmp(linha,"movs\n") == 0) {
             putchar('\n');
             movs(e);
             putchar('\n');
@@ -269,8 +278,12 @@ int interpretador(ESTADO *e) {
             result = 1;
         }
         //O jogador introduz o comandos "jog"
-        else if (sscanf(linha, "%[jog]", comando) == 1) {
+        else if (strcmp(linha,"jog\n") == 0) {
             result = jog(e);
+        }
+        //O jogador introduz o comandos "jog2"
+        else if (strcmp(linha,"jog2\n") == 0) {
+            result = jog2(e);
         }
         else {
             mostrar_erro(COMANDO_INVALIDO);

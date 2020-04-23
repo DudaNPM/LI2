@@ -9,6 +9,33 @@ Definição de funções que tratam da lógica do programa
 #include "dados.h"
 #include "listas.h"
 
+
+/**
+\brief Escolhe a coordenada mais próxima da casa final do jogador atual
+@param e Apontador para o estado
+@returns Coordenada mais próxima
+*/
+COORDENADA distancia_euclidiana(ESTADO *e);
+
+
+/**
+\brief Escolhe a coordenada mais próxima da casa final do jogador atual
+@param casas_livres Lista de casas livres em volta do jogador
+@param jogador_atual Número do jogador atual
+@returns Coordenada mais próxima
+*/
+COORDENADA coord_mais_prox(LISTA casas_livres, int jogador_atual);
+
+
+/**
+\brief Calcula a distância entre uma casa e a casa final do jogador atual
+@param c A coordenada
+@param jogador_atual Número do jogador atual
+@returns A distância
+*/
+double calcula_distancia(COORDENADA c, int jogador_atual);
+
+
 /**
 \brief Escolhe uma CASA livre na vizinhança da peça branca
 @param e Apontador para o estado

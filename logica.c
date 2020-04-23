@@ -1,10 +1,59 @@
 //LOGICA DO PROGRAMA
 #include <stdlib.h>
 #include <time.h>
+#include <math.h>
 #include "dados.h"
 #include "interface.h"
 #include "listas.h"
 #include "logica.h"
+
+
+COORDENADA distancia_euclidiana(ESTADO *e){
+    //Posição da peça branca
+    COORDENADA pos_atual = obter_ultima_jogada(e);
+
+    //Lista com as posições vizinhas da peça branca livres
+    LISTA a = armaneza_pos_viz(e, pos_atual);
+
+    //Jogador atual
+    int jog = obter_jogador_atual(e);
+
+    COORDENADA jogada = coord_mais_prox(a, jog);
+
+    return jogada;
+}
+
+
+COORDENADA coord_mais_prox(LISTA casas_livres, int jogador_atual){
+    double menor_dist = 10000;
+    COORDENADA coord_final;
+
+    while (!lista_esta_vazia(casas_livres)) {
+        COORDENADA *c = (COORDENADA *) devolve_cabeca(casas_livres);
+        printf("%d%d\n", c->coluna, c->linha);
+        double dist = calcula_distancia(*c, jogador_atual);
+        printf("%f\n", dist);
+        casas_livres = proximo(casas_livres);
+        if (dist < menor_dist){
+            menor_dist = dist;
+            coord_final = *c;
+        }
+    }
+
+    return coord_final;
+}
+
+
+double calcula_distancia(COORDENADA c, int jogador_atual){
+    double result;
+
+    if(jogador_atual == 1)
+        result = sqrt(pow(c.coluna, 2) + pow(c.linha, 2));
+    else
+        result = sqrt(pow(7 - c.coluna, 2) + pow(7 - c.linha, 2));
+
+    return result;
+}
 
 
 COORDENADA escolha_aleatoria(ESTADO *e){

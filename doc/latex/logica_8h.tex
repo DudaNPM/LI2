@@ -1,0 +1,231 @@
+\hypertarget{logica_8h}{}\section{logica.\+h File Reference}
+\label{logica_8h}\index{logica.\+h@{logica.\+h}}
+{\ttfamily \#include \char`\"{}dados.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}listas.\+h\char`\"{}}\newline
+Include dependency graph for logica.\+h\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} \hyperlink{logica_8h_a1557de841beb611a13b0ee80baa7645b}{distancia\+\_\+euclidiana} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Escolhe a coordenada mais próxima da casa final do jogador atual. \end{DoxyCompactList}\item 
+\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} \hyperlink{logica_8h_a1bc4ea76d7d7ba7c510b10283208ae10}{get\+\_\+coord\+\_\+mais\+\_\+prox} (\hyperlink{structnodo}{L\+I\+S\+TA} casas\+\_\+livres, int jogador\+\_\+atual)
+\begin{DoxyCompactList}\small\item\em Escolhe a coordenada mais próxima da casa final do jogador atual. \end{DoxyCompactList}\item 
+double \hyperlink{logica_8h_a677c0f4d7f93c14c0ba13b1b33f2def4}{calcula\+\_\+distancia} (\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} c, int jogador\+\_\+atual)
+\begin{DoxyCompactList}\small\item\em Calcula a distância entre uma casa e a casa final do jogador atual. \end{DoxyCompactList}\item 
+\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} \hyperlink{logica_8h_a6c3a8c65de402405bfdae0c6d096d272}{escolha\+\_\+aleatoria} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Escolhe uma C\+A\+SA livre na vizinhança da peça branca. \end{DoxyCompactList}\item 
+\hyperlink{structnodo}{L\+I\+S\+TA} \hyperlink{logica_8h_aedba38478f4e31a22bc0aff5e185b18e}{armaneza\+\_\+pos\+\_\+viz} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} coord)
+\begin{DoxyCompactList}\small\item\em Verifica se as casas em volta da peça branca estão livres. \end{DoxyCompactList}\item 
+\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} $\ast$ \hyperlink{logica_8h_ae501f2a107d637dabc7371cabc4b17d7}{duplica\+\_\+coordenada} (\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} c)
+\begin{DoxyCompactList}\small\item\em Cria uma cópia de uma coordenada. \end{DoxyCompactList}\item 
+int \hyperlink{logica_8h_a83d887ddf545241657c8bd685a3b676c}{pertence\+\_\+as\+\_\+jogadas} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} coord, int i)
+\begin{DoxyCompactList}\small\item\em Verifica se uma coordenada pertence ao arreio de jogadas. \end{DoxyCompactList}\item 
+int \hyperlink{logica_8h_a521891400dc2dccd429b8fef56aee405}{validar\+\_\+vitoria} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} coord)
+\begin{DoxyCompactList}\small\item\em Verifica se algum dos jogadores ganhou o jogo. \end{DoxyCompactList}\item 
+int \hyperlink{logica_8h_a609d7d1c918d33c9acdc2c247c87f7a0}{validar\+\_\+jogada} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} coord)
+\begin{DoxyCompactList}\small\item\em Verifica a jogada é válida ou não. \end{DoxyCompactList}\item 
+int \hyperlink{logica_8h_ac313d7e553b1e2b5f266acb9bfff8141}{jogar} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} c)
+\begin{DoxyCompactList}\small\item\em Dá continuidade ao jogo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definição de funções que tratam da lógica do programa 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{logica_8h_aedba38478f4e31a22bc0aff5e185b18e}\label{logica_8h_aedba38478f4e31a22bc0aff5e185b18e}} 
+\index{logica.\+h@{logica.\+h}!armaneza\+\_\+pos\+\_\+viz@{armaneza\+\_\+pos\+\_\+viz}}
+\index{armaneza\+\_\+pos\+\_\+viz@{armaneza\+\_\+pos\+\_\+viz}!logica.\+h@{logica.\+h}}
+\subsubsection{\texorpdfstring{armaneza\+\_\+pos\+\_\+viz()}{armaneza\_pos\_viz()}}
+{\footnotesize\ttfamily \hyperlink{structnodo}{L\+I\+S\+TA} armaneza\+\_\+pos\+\_\+viz (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}}]{coord }\end{DoxyParamCaption})}
+
+
+
+Verifica se as casas em volta da peça branca estão livres. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontador para o estado \\
+\hline
+{\em coord} & Apontador para a coordenada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lista com as casas livres 
+\end{DoxyReturn}
+\mbox{\Hypertarget{logica_8h_a677c0f4d7f93c14c0ba13b1b33f2def4}\label{logica_8h_a677c0f4d7f93c14c0ba13b1b33f2def4}} 
+\index{logica.\+h@{logica.\+h}!calcula\+\_\+distancia@{calcula\+\_\+distancia}}
+\index{calcula\+\_\+distancia@{calcula\+\_\+distancia}!logica.\+h@{logica.\+h}}
+\subsubsection{\texorpdfstring{calcula\+\_\+distancia()}{calcula\_distancia()}}
+{\footnotesize\ttfamily double calcula\+\_\+distancia (\begin{DoxyParamCaption}\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}}]{c,  }\item[{int}]{jogador\+\_\+atual }\end{DoxyParamCaption})}
+
+
+
+Calcula a distância entre uma casa e a casa final do jogador atual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & A coordenada \\
+\hline
+{\em jogador\+\_\+atual} & Número do jogador atual \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A distância 
+\end{DoxyReturn}
+\mbox{\Hypertarget{logica_8h_a1557de841beb611a13b0ee80baa7645b}\label{logica_8h_a1557de841beb611a13b0ee80baa7645b}} 
+\index{logica.\+h@{logica.\+h}!distancia\+\_\+euclidiana@{distancia\+\_\+euclidiana}}
+\index{distancia\+\_\+euclidiana@{distancia\+\_\+euclidiana}!logica.\+h@{logica.\+h}}
+\subsubsection{\texorpdfstring{distancia\+\_\+euclidiana()}{distancia\_euclidiana()}}
+{\footnotesize\ttfamily \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} distancia\+\_\+euclidiana (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+Escolhe a coordenada mais próxima da casa final do jogador atual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontador para o estado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Coordenada mais próxima 
+\end{DoxyReturn}
+\mbox{\Hypertarget{logica_8h_ae501f2a107d637dabc7371cabc4b17d7}\label{logica_8h_ae501f2a107d637dabc7371cabc4b17d7}} 
+\index{logica.\+h@{logica.\+h}!duplica\+\_\+coordenada@{duplica\+\_\+coordenada}}
+\index{duplica\+\_\+coordenada@{duplica\+\_\+coordenada}!logica.\+h@{logica.\+h}}
+\subsubsection{\texorpdfstring{duplica\+\_\+coordenada()}{duplica\_coordenada()}}
+{\footnotesize\ttfamily \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}$\ast$ duplica\+\_\+coordenada (\begin{DoxyParamCaption}\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}}]{c }\end{DoxyParamCaption})}
+
+
+
+Cria uma cópia de uma coordenada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Coordenada a ser copiada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Apontador para a coordenada criada 
+\end{DoxyReturn}
+\mbox{\Hypertarget{logica_8h_a6c3a8c65de402405bfdae0c6d096d272}\label{logica_8h_a6c3a8c65de402405bfdae0c6d096d272}} 
+\index{logica.\+h@{logica.\+h}!escolha\+\_\+aleatoria@{escolha\+\_\+aleatoria}}
+\index{escolha\+\_\+aleatoria@{escolha\+\_\+aleatoria}!logica.\+h@{logica.\+h}}
+\subsubsection{\texorpdfstring{escolha\+\_\+aleatoria()}{escolha\_aleatoria()}}
+{\footnotesize\ttfamily \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} escolha\+\_\+aleatoria (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+Escolhe uma C\+A\+SA livre na vizinhança da peça branca. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontador para o estado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Coordenada aleatória 
+\end{DoxyReturn}
+\mbox{\Hypertarget{logica_8h_a1bc4ea76d7d7ba7c510b10283208ae10}\label{logica_8h_a1bc4ea76d7d7ba7c510b10283208ae10}} 
+\index{logica.\+h@{logica.\+h}!get\+\_\+coord\+\_\+mais\+\_\+prox@{get\+\_\+coord\+\_\+mais\+\_\+prox}}
+\index{get\+\_\+coord\+\_\+mais\+\_\+prox@{get\+\_\+coord\+\_\+mais\+\_\+prox}!logica.\+h@{logica.\+h}}
+\subsubsection{\texorpdfstring{get\+\_\+coord\+\_\+mais\+\_\+prox()}{get\_coord\_mais\_prox()}}
+{\footnotesize\ttfamily \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} get\+\_\+coord\+\_\+mais\+\_\+prox (\begin{DoxyParamCaption}\item[{\hyperlink{structnodo}{L\+I\+S\+TA}}]{casas\+\_\+livres,  }\item[{int}]{jogador\+\_\+atual }\end{DoxyParamCaption})}
+
+
+
+Escolhe a coordenada mais próxima da casa final do jogador atual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em casas\+\_\+livres} & Lista de casas livres em volta do jogador \\
+\hline
+{\em jogador\+\_\+atual} & Número do jogador atual \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Coordenada mais próxima 
+\end{DoxyReturn}
+\mbox{\Hypertarget{logica_8h_ac313d7e553b1e2b5f266acb9bfff8141}\label{logica_8h_ac313d7e553b1e2b5f266acb9bfff8141}} 
+\index{logica.\+h@{logica.\+h}!jogar@{jogar}}
+\index{jogar@{jogar}!logica.\+h@{logica.\+h}}
+\subsubsection{\texorpdfstring{jogar()}{jogar()}}
+{\footnotesize\ttfamily int jogar (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}}]{c }\end{DoxyParamCaption})}
+
+
+
+Dá continuidade ao jogo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontador para o estado \\
+\hline
+{\em coord} & Apontador para a coordenada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Valor 0 se o jogo acabar, 1 caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{logica_8h_a83d887ddf545241657c8bd685a3b676c}\label{logica_8h_a83d887ddf545241657c8bd685a3b676c}} 
+\index{logica.\+h@{logica.\+h}!pertence\+\_\+as\+\_\+jogadas@{pertence\+\_\+as\+\_\+jogadas}}
+\index{pertence\+\_\+as\+\_\+jogadas@{pertence\+\_\+as\+\_\+jogadas}!logica.\+h@{logica.\+h}}
+\subsubsection{\texorpdfstring{pertence\+\_\+as\+\_\+jogadas()}{pertence\_as\_jogadas()}}
+{\footnotesize\ttfamily int pertence\+\_\+as\+\_\+jogadas (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}}]{coord,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Verifica se uma coordenada pertence ao arreio de jogadas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontador para o estado \\
+\hline
+{\em coord} & Apontador para a coordenada \\
+\hline
+{\em i} & O índice do arreio \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Valor 1 se pertencer ao arreio, 0 caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{logica_8h_a609d7d1c918d33c9acdc2c247c87f7a0}\label{logica_8h_a609d7d1c918d33c9acdc2c247c87f7a0}} 
+\index{logica.\+h@{logica.\+h}!validar\+\_\+jogada@{validar\+\_\+jogada}}
+\index{validar\+\_\+jogada@{validar\+\_\+jogada}!logica.\+h@{logica.\+h}}
+\subsubsection{\texorpdfstring{validar\+\_\+jogada()}{validar\_jogada()}}
+{\footnotesize\ttfamily int validar\+\_\+jogada (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}}]{coord }\end{DoxyParamCaption})}
+
+
+
+Verifica a jogada é válida ou não. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontador para o estado \\
+\hline
+{\em coord} & Apontador para a coordenada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Valor 1 se a jogada for válida, 0 caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{logica_8h_a521891400dc2dccd429b8fef56aee405}\label{logica_8h_a521891400dc2dccd429b8fef56aee405}} 
+\index{logica.\+h@{logica.\+h}!validar\+\_\+vitoria@{validar\+\_\+vitoria}}
+\index{validar\+\_\+vitoria@{validar\+\_\+vitoria}!logica.\+h@{logica.\+h}}
+\subsubsection{\texorpdfstring{validar\+\_\+vitoria()}{validar\_vitoria()}}
+{\footnotesize\ttfamily int validar\+\_\+vitoria (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}}]{coord }\end{DoxyParamCaption})}
+
+
+
+Verifica se algum dos jogadores ganhou o jogo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontador para o estado \\
+\hline
+{\em coord} & Apontador para a coordenada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Valor 1 ou 2 consoante o jogador vencedor 
+\end{DoxyReturn}

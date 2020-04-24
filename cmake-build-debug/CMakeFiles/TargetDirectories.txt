@@ -1,3 +1,0 @@
-/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir
-/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/cmake-build-debug/CMakeFiles/edit_cache.dir

@@ -72,7 +72,13 @@ O principal desafio deste comando foi, mais uma vez, a criação de uma função
 
 ## 5ªSemana
 
-Neste novo guião foi-nos proposto a criação de um módulo de listas ligadas genérico e, para alim disso, a implementação do comando "jog".
+Neste novo guião foi-nos proposto a criação de um módulo de listas ligadas genérico e, para além disso, a implementação do comando "jog".
 A este novo módulo foram acrescentadas várias simples funcões acerca de listas para mais tarde serem usadas no novo comando. Este deve permitir que o jogador atual peça ao computador para jogar por si. Para tal foram-nos fornecidas várias heurísticas da qual foi escolhida a Escolha aleatória.
 
-A estratégia utilizada para a construção desta heurística, baseia-se em calcular o número de casas livres(N) em volta da posição atual do jogador e, posteriormente, utilizá-lo para formação de um número aleatório entre 0 e N. Apartir deste, basta apenas escolher a possível jogada a efetuar.
+A estratégia utilizada para a construção desta heurística, baseia-se em calcular o número de casas livres(N) em volta da posição atual do jogador e, posteriormente, utilizá-lo para formação de um número aleatório entre 0 e N. A partir deste, basta apenas escolher a possível jogada a efetuar.
+
+## 6ªSemana
+
+Por fim, nesta última semana de trabalho, o desafio foi semelhante ao da semana anterior mudando apenas a estratégia escolhida. Desta vez, optamos pela implementação da heurística da Distância euclidiana.
+
+A implementação desta estratégia não foi um grande desafio, tirando um pequeno problema encontrado ao tentar inserir elementos numa uma lista ligada. Fora isso, foi apenas necessário calcular as distâncias entre as casas livres rodeadas pelo jogador e a casa vencedora do mesmo. A partir deste ponto, basta apenas escolher a que se encontra mais perto do objetivo.

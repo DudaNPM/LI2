@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/projeto/dados.c" "/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/projeto/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/dados.c.o"
-  "/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/projeto/interface.c" "/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/projeto/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/interface.c.o"
-  "/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/projeto/listas.c" "/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/projeto/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/listas.c.o"
-  "/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/projeto/logica.c" "/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/projeto/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/logica.c.o"
-  "/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/projeto/main.c" "/mnt/c/Users/DUARTE/CLionProjects/LI2/Li2_Rastros_2020/projeto/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/main.c.o"
+  "/mnt/c/Users/DUARTE/CLionProjects/LI2/li2PL3G04/projeto/dados.c" "/mnt/c/Users/DUARTE/CLionProjects/LI2/li2PL3G04/projeto/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/dados.c.o"
+  "/mnt/c/Users/DUARTE/CLionProjects/LI2/li2PL3G04/projeto/interface.c" "/mnt/c/Users/DUARTE/CLionProjects/LI2/li2PL3G04/projeto/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/interface.c.o"
+  "/mnt/c/Users/DUARTE/CLionProjects/LI2/li2PL3G04/projeto/listas.c" "/mnt/c/Users/DUARTE/CLionProjects/LI2/li2PL3G04/projeto/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/listas.c.o"
+  "/mnt/c/Users/DUARTE/CLionProjects/LI2/li2PL3G04/projeto/logica.c" "/mnt/c/Users/DUARTE/CLionProjects/LI2/li2PL3G04/projeto/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/logica.c.o"
+  "/mnt/c/Users/DUARTE/CLionProjects/LI2/li2PL3G04/projeto/main.c" "/mnt/c/Users/DUARTE/CLionProjects/LI2/li2PL3G04/projeto/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

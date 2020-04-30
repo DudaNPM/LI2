@@ -12,227 +12,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ee51ce7-f3e2-49bf-8fb0-91d9e1e3e5b3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Projeto_Rastros.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/DUARTE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.2/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.2/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/C.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/dados.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/interface.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/listas.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/logica.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/main.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Projeto_Rastros.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dados.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dados.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/Doxyfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/annotated.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/bc_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/bdwn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/classes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/closed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/dados_8h.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/dados_8h__dep__incl.dot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/dados_8h__dep__incl.md5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/dados_8h_source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/doc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/doxygen.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/doxygen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/dynsections.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/files.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/folderclosed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/folderopen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/functions.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/functions_vars.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/globals.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/globals_enum.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/globals_func.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/globals_type.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/graph_legend.dot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/graph_legend.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/graph_legend.md5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/interface_8h.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/interface_8h__incl.dot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/interface_8h__incl.md5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/interface_8h_source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/logica_8h.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/logica_8h__incl.dot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/logica_8h__incl.md5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/logica_8h_source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/md_README.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/menu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/menudata.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/nav_f.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/nav_g.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/nav_h.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/open.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/pages.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/all_0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/all_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/all_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/all_1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/all_2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/all_2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/all_3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/all_3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/all_4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/all_4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/all_5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/all_5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/all_6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/all_6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/all_7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/all_7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/all_8.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/all_8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/all_9.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/all_9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/all_a.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/all_a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/all_b.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/all_b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/all_c.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/all_c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/all_d.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/all_d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/classes_0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/classes_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/classes_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/classes_1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/classes_2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/classes_2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/enums_0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/enums_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/enums_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/enums_1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/files_0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/files_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/files_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/files_1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/files_2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/files_2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/functions_0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/functions_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/functions_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/functions_1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/functions_2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/functions_2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/functions_3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/functions_3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/functions_4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/functions_4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/functions_5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/functions_5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/functions_6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/functions_6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/functions_7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/functions_7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/functions_8.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/functions_8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/mag_sel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/nomatches.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/pages_0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/pages_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/search.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/search.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/search_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/search_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/search_r.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/searchdata.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/typedefs_0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/typedefs_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/variables_0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/variables_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/variables_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/variables_1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/variables_2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/variables_2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/variables_3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/search/variables_3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/splitbar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/structCOORDENADA-members.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/structCOORDENADA.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/structESTADO-members.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/structESTADO.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/structESTADO__coll__graph.dot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/structESTADO__coll__graph.md5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/structJOGADA-members.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/structJOGADA.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/structJOGADA__coll__graph.dot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/structJOGADA__coll__graph.md5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/sync_off.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/sync_on.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/tab_a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/tab_b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/tab_h.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/tab_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/html/tabs.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/latex/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/latex/annotated.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/latex/dados_8h.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/latex/dados_8h.tex.tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/latex/dados_8h__dep__incl.dot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/latex/dados_8h__dep__incl.md5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/latex/doxygen.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/latex/files.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/latex/interface_8h.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/latex/interface_8h__incl.dot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/latex/interface_8h__incl.md5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/latex/logica_8h.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/latex/logica_8h__incl.dot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/latex/logica_8h__incl.md5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/latex/md_README.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/latex/refman.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/latex/structCOORDENADA.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/latex/structESTADO.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/latex/structESTADO__coll__graph.dot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/latex/structESTADO__coll__graph.md5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/latex/structJOGADA.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/latex/structJOGADA__coll__graph.dot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao/latex/structJOGADA__coll__graph.md5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/listas.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/listas.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logica.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logica.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/projeto/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/projeto/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/projeto/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/projeto/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/projeto/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/projeto/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/projeto/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,7 +45,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/projeto/CMakeLists.txt" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager">
@@ -278,7 +65,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587743348927</updated>
-      <workItem from="1587743352020" duration="235000" />
+      <workItem from="1587743352020" duration="479000" />
+      <workItem from="1587992311654" duration="1316000" />
+      <workItem from="1588246409886" duration="30000" />
+      <workItem from="1588246464416" duration="1897000" />
+      <workItem from="1588248527659" duration="4056000" />
+      <workItem from="1588255722246" duration="148000" />
+      <workItem from="1588255938794" duration="119000" />
     </task>
     <servers />
   </component>

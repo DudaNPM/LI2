@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 /mnt/c/Users/DUARTE/CLionProjects/LI2/li2PL3G04/projeto/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /mnt/c/Users/DUARTE/CLionProjects/LI2/li2PL3G04/projeto/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir
 /mnt/c/Users/DUARTE/CLionProjects/LI2/li2PL3G04/projeto/cmake-build-debug/CMakeFiles/edit_cache.dir
+=======
+C:/Users/Asus/Desktop/li2/Li2_Rastros_2020/projeto/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Asus/Desktop/li2/Li2_Rastros_2020/projeto/cmake-build-debug/CMakeFiles/Projeto_Rastros.dir
+C:/Users/Asus/Desktop/li2/Li2_Rastros_2020/projeto/cmake-build-debug/CMakeFiles/edit_cache.dir
+>>>>>>> c9e8fdad14b2fa67ffcf9ffd312a1ab09189cfd3

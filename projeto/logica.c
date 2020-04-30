@@ -28,6 +28,7 @@ COORDENADA get_coord_mais_prox(LISTA casas_livres, int jogador_atual){
     double menor_dist = 100;
     COORDENADA coord_mais_proxima;
 
+    //Enquanto houver casas livres à volta do jogador
     while (!lista_esta_vazia(casas_livres)) {
         //Casa livre
         COORDENADA *c = (COORDENADA *) devolve_cabeca(casas_livres);
@@ -55,8 +56,10 @@ double calcula_distancia(COORDENADA c, int jogador_atual){
     int linha = obter_linha(c);
 
     if(jogador_atual == 1)
+        //Distancia entre a casa de coordenada c e a casa "1" de coordenada {0,0}
         dist = sqrt(pow(coluna, 2) + pow(linha, 2));
     else
+        //Distancia entre a casa de coordenada c e a casa "2" de coordenada {7,7}
         dist = sqrt(pow(7 - coluna, 2) + pow(7 - linha, 2));
 
     return dist;
@@ -70,7 +73,7 @@ COORDENADA escolha_aleatoria(ESTADO *e){
 
     //Lista com as posições vizinhas da peça branca livres
     LISTA pos_vizinhas = armaneza_pos_viz(e, pos_atual);
-    int comp = length(pos_vizinhas);
+    int comp = length(pos_vizinhas);//Numero de casa livres
 
     //Indice aleatorio para a escolha da coordenada
     srandom(time(NULL));
@@ -251,16 +254,19 @@ int jogar(ESTADO *e, COORDENADA coord){
     int vitoria = validar_vitoria(e,coord);
     COORDENADA peca_branca = obter_ultima_jogada(e);
 
-    if (valida == 1) {  atualiza_jogadas(e, coord); //Controlo da informacao sobre as jogadas
-                        atualiza_jogador_atual(e); //Troca de jogador
-                        atualiza_num_jogadas(e); //Controlo do numero de jogadas
-                        atualiza_casa(e, peca_branca, PRETA); //A peca que antes era BRANCA passa a ser PRETA
-                        atualiza_casa(e, coord, BRANCA); //A casa onde o jogador joga passa a ser BRANCA
-                        atualiza_ultima_jogada(e, coord); //A ultima jogada passa a ser a jogada acabada de efetuar
-                     }
+    //Verifica se a jogada é valida ou não
+    if (valida) { atualiza_jogadas(e, coord); //Controlo da informacao sobre as jogadas
+                  atualiza_jogador_atual(e); //Troca de jogador
+                  atualiza_num_jogadas(e); //Controlo do numero de jogadas
+                  atualiza_casa(e, peca_branca, PRETA); //A peca que antes era BRANCA passa a ser PRETA
+                  atualiza_casa(e, coord, BRANCA); //A casa onde o jogador joga passa a ser BRANCA
+                  atualiza_ultima_jogada(e, coord); //A ultima jogada passa a ser a jogada acabada de efetuar
+    }
+    //Caso nao seja valida mostra mensagem de erro
     else mostrar_erro(JOGADA_INVALIDA);
 
-    if (vitoria != 0 && valida == 1){
+    //Verifica se a jogada é valida e se um dos jogadores ganhou o jogo
+    if (valida && vitoria != 0){
         mostrar_tabuleiro(e);
         mostrar_vitoria(vitoria);
         return 0;

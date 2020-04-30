@@ -1,11 +1,13 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Projeto_Rastros.dir/main.c.o"
-  "CMakeFiles/Projeto_Rastros.dir/dados.c.o"
-  "CMakeFiles/Projeto_Rastros.dir/logica.c.o"
-  "CMakeFiles/Projeto_Rastros.dir/interface.c.o"
-  "CMakeFiles/Projeto_Rastros.dir/listas.c.o"
+  "CMakeFiles/Projeto_Rastros.dir/dados.c.obj"
+  "CMakeFiles/Projeto_Rastros.dir/interface.c.obj"
+  "CMakeFiles/Projeto_Rastros.dir/listas.c.obj"
+  "CMakeFiles/Projeto_Rastros.dir/logica.c.obj"
+  "CMakeFiles/Projeto_Rastros.dir/main.c.obj"
+  "Projeto_Rastros.exe"
+  "Projeto_Rastros.exe.manifest"
   "Projeto_Rastros.pdb"
-  "Projeto_Rastros"
+  "libProjeto_Rastros.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

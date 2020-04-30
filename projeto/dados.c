@@ -11,7 +11,8 @@ void atualiza_estado3(ESTADO *e, int jogada) {
     COORDENADA c2 = obter_coord(e, jogada-1, 2);
 
 
-    if (c2.linha == 0 && c2.coluna == 0){
+    //Caso o jogador 2 ainda nao tenha efetuado uma jogada
+    if (obter_linha(c2) == 0 && obter_coluna(c2) == 0){
         set_jogador_atual(e, 2);
         set_ultima_jogada(e, c1);
         set_num_jogadas(e, jogada - 1);
@@ -78,15 +79,15 @@ void atualiza_estado(FILE *fPointer, ESTADO *e){
 
 
     //Lê o tabuleiro
-    for (linha = 7; linha >= 0; linha--){
-        fgets(line, BUF_SIZE, fPointer);
-        for (coluna = 0; coluna <= 7; coluna++) {
-            if (line[coluna] == '*'){
-                atualiza_casa(e, (COORDENADA) {coluna, linha}, BRANCA);
-                atualiza_ultima_jogada(e, (COORDENADA) {coluna, linha});
+    for (linha = 7; linha >= 0; linha--) {
+        if (fgets(line, BUF_SIZE, fPointer) != NULL) {
+            for (coluna = 0; coluna <= 7; coluna++) {
+                if (line[coluna] == '*') {
+                    atualiza_casa(e, (COORDENADA) {coluna, linha}, BRANCA);
+                    atualiza_ultima_jogada(e, (COORDENADA) {coluna, linha});
+                } else if (line[coluna] == '#') atualiza_casa(e, (COORDENADA) {coluna, linha}, PRETA);
+                else atualiza_casa(e, (COORDENADA) {coluna, linha}, VAZIO);
             }
-            else if (line[coluna] == '#') atualiza_casa(e, (COORDENADA) {coluna, linha}, PRETA);
-            else atualiza_casa(e, (COORDENADA) {coluna, linha}, VAZIO);
         }
     }
 

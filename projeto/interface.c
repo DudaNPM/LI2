@@ -31,7 +31,7 @@ int jog(ESTADO *e){
 
 
 void pos(ESTADO *e, int jogada, int maior_jogada){
-    int jog = e->num_jogadas;
+    int jog = obter_num_jogadas(e);
 
     if (jog >= maior_jogada) maior_num_jogadas = jog;
 
@@ -45,8 +45,8 @@ void pos(ESTADO *e, int jogada, int maior_jogada){
 
 
 void movs(ESTADO *e) {
-    int jogador = obter_jogador_atual(e);
-    int jogadas = obter_num_jogadas(e);
+    int jogador = obter_jogador_atual(e); //Numero do jogador atual
+    int jogadas = obter_num_jogadas(e); //Numero do jogadas efetuadas
     int i;
 
     for (i = 0; i < jogadas; i++) {
@@ -78,8 +78,8 @@ void movs(ESTADO *e) {
 
 
 void gravar_jogadas(ESTADO *e, FILE *fp){
-    int jogador = obter_jogador_atual(e);
-    int jogadas = obter_num_jogadas(e);
+    int jogador = obter_jogador_atual(e); //Numero do jogador atual
+    int jogadas = obter_num_jogadas(e); //Numero do jogadas efetuadas
     int i;
 
     for (i = 0; i < jogadas; i++) {

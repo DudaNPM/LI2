@@ -1,0 +1,427 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="logica_8h" kind="file" language="C++">
+    <compoundname>logica.h</compoundname>
+    <includes refid="dados_8h" local="yes">dados.h</includes>
+    <includes refid="listas_8h" local="yes">listas.h</includes>
+    <includedby refid="dados_8c" local="yes">dados.c</includedby>
+    <includedby refid="interface_8c" local="yes">interface.c</includedby>
+    <includedby refid="logica_8c" local="yes">logica.c</includedby>
+    <incdepgraph>
+      <node id="41">
+        <label>logica.h</label>
+        <link refid="logica_8h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>dados.h</label>
+        <link refid="dados_8h"/>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>listas.h</label>
+        <link refid="listas_8h"/>
+      </node>
+      <node id="43">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="logica_8h_1a1557de841beb611a13b0ee80baa7645b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
+        <definition>COORDENADA distancia_euclidiana</definition>
+        <argsstring>(ESTADO *e)</argsstring>
+        <name>distancia_euclidiana</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Escolhe a coordenada mais próxima da casa final do jogador atual. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Coordenada mais próxima </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logica.h" line="18" column="1" bodyfile="logica.c" bodystart="11" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="logica_8h_1a1bc4ea76d7d7ba7c510b10283208ae10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
+        <definition>COORDENADA get_coord_mais_prox</definition>
+        <argsstring>(LISTA casas_livres, int jogador_atual)</argsstring>
+        <name>get_coord_mais_prox</name>
+        <param>
+          <type><ref refid="structnodo" kindref="compound">LISTA</ref></type>
+          <declname>casas_livres</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>jogador_atual</declname>
+        </param>
+        <briefdescription>
+<para>Escolhe a coordenada mais próxima da casa final do jogador atual. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>casas_livres</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lista de casas livres em volta do jogador </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>jogador_atual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Número do jogador atual </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Coordenada mais próxima </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logica.h" line="27" column="1" bodyfile="logica.c" bodystart="27" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="logica_8h_1a677c0f4d7f93c14c0ba13b1b33f2def4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double calcula_distancia</definition>
+        <argsstring>(COORDENADA c, int jogador_atual)</argsstring>
+        <name>calcula_distancia</name>
+        <param>
+          <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>jogador_atual</declname>
+        </param>
+        <briefdescription>
+<para>Calcula a distância entre uma casa e a casa final do jogador atual. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A coordenada </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>jogador_atual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Número do jogador atual </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A distância </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logica.h" line="36" column="1" bodyfile="logica.c" bodystart="53" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="logica_8h_1a6c3a8c65de402405bfdae0c6d096d272" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
+        <definition>COORDENADA escolha_aleatoria</definition>
+        <argsstring>(ESTADO *e)</argsstring>
+        <name>escolha_aleatoria</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Escolhe uma CASA livre na vizinhança da peça branca. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Coordenada aleatória </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logica.h" line="44" column="1" bodyfile="logica.c" bodystart="69" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="logica_8h_1aedba38478f4e31a22bc0aff5e185b18e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structnodo" kindref="compound">LISTA</ref></type>
+        <definition>LISTA armaneza_pos_viz</definition>
+        <argsstring>(ESTADO *e, COORDENADA coord)</argsstring>
+        <name>armaneza_pos_viz</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
+          <declname>coord</declname>
+        </param>
+        <briefdescription>
+<para>Verifica se as casas em volta da peça branca estão livres. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>coord</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para a coordenada </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Lista com as casas livres </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logica.h" line="53" column="1" bodyfile="logica.c" bodystart="94" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="logica_8h_1ae501f2a107d637dabc7371cabc4b17d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref> *</type>
+        <definition>COORDENADA* duplica_coordenada</definition>
+        <argsstring>(COORDENADA c)</argsstring>
+        <name>duplica_coordenada</name>
+        <param>
+          <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Cria uma cópia de uma coordenada. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coordenada a ser copiada </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Apontador para a coordenada criada </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logica.h" line="61" column="1" bodyfile="logica.c" bodystart="128" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="logica_8h_1a83d887ddf545241657c8bd685a3b676c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int pertence_as_jogadas</definition>
+        <argsstring>(ESTADO *e, COORDENADA coord, int i)</argsstring>
+        <name>pertence_as_jogadas</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
+          <declname>coord</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Verifica se uma coordenada pertence ao arreio de jogadas. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>coord</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para a coordenada </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>O índice do arreio </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Valor 1 se pertencer ao arreio, 0 caso contrário </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logica.h" line="71" column="1" bodyfile="logica.c" bodystart="140" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="logica_8h_1a521891400dc2dccd429b8fef56aee405" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int validar_vitoria</definition>
+        <argsstring>(ESTADO *e, COORDENADA coord)</argsstring>
+        <name>validar_vitoria</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
+          <declname>coord</declname>
+        </param>
+        <briefdescription>
+<para>Verifica se algum dos jogadores ganhou o jogo. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>coord</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para a coordenada </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Valor 1 ou 2 consoante o jogador vencedor </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logica.h" line="80" column="1" bodyfile="logica.c" bodystart="158" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="logica_8h_1a609d7d1c918d33c9acdc2c247c87f7a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int validar_jogada</definition>
+        <argsstring>(ESTADO *e, COORDENADA coord)</argsstring>
+        <name>validar_jogada</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
+          <declname>coord</declname>
+        </param>
+        <briefdescription>
+<para>Verifica a jogada é válida ou não. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>coord</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para a coordenada </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Valor 1 se a jogada for válida, 0 caso contrário </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logica.h" line="88" column="1" bodyfile="logica.c" bodystart="230" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="logica_8h_1ac313d7e553b1e2b5f266acb9bfff8141" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int jogar</definition>
+        <argsstring>(ESTADO *e, COORDENADA c)</argsstring>
+        <name>jogar</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Dá continuidade ao jogo. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>coord</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para a coordenada </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Valor 0 se o jogo acabar, 1 caso contrário </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logica.h" line="96" column="1" bodyfile="logica.c" bodystart="252" bodyend="276"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Definição de funções que tratam da lógica do programa </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="preprocessor">#ifndef<sp/>___LOGICA_H___</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>___LOGICA_H___</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dados_8h" kindref="compound">dados.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="listas_8h" kindref="compound">listas.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="logica_8h_1a1557de841beb611a13b0ee80baa7645b" kindref="member">distancia_euclidiana</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="logica_8h_1a1bc4ea76d7d7ba7c510b10283208ae10" kindref="member">get_coord_mais_prox</ref>(<ref refid="structnodo" kindref="compound">LISTA</ref><sp/>casas_livres,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>jogador_atual);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="logica_8h_1a677c0f4d7f93c14c0ba13b1b33f2def4" kindref="member">calcula_distancia</ref>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>c,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>jogador_atual);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="logica_8h_1a6c3a8c65de402405bfdae0c6d096d272" kindref="member">escolha_aleatoria</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><ref refid="structnodo" kindref="compound">LISTA</ref><sp/><ref refid="logica_8h_1aedba38478f4e31a22bc0aff5e185b18e" kindref="member">armaneza_pos_viz</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>coord);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>*<sp/><ref refid="logica_8h_1ae501f2a107d637dabc7371cabc4b17d7" kindref="member">duplica_coordenada</ref>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>c);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="logica_8h_1a83d887ddf545241657c8bd685a3b676c" kindref="member">pertence_as_jogadas</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>coord,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="logica_8h_1a521891400dc2dccd429b8fef56aee405" kindref="member">validar_vitoria</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>coord);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="logica_8h_1a609d7d1c918d33c9acdc2c247c87f7a0" kindref="member">validar_jogada</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>coord);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="logica_8h_1ac313d7e553b1e2b5f266acb9bfff8141" kindref="member">jogar</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>c);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="logica.h"/>
+  </compounddef>
+</doxygen>

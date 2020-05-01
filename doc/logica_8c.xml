@@ -1,0 +1,705 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="logica_8c" kind="file" language="C++">
+    <compoundname>logica.c</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">time.h</includes>
+    <includes local="no">math.h</includes>
+    <includes refid="dados_8h" local="yes">dados.h</includes>
+    <includes refid="interface_8h" local="yes">interface.h</includes>
+    <includes refid="listas_8h" local="yes">listas.h</includes>
+    <includes refid="logica_8h" local="yes">logica.h</includes>
+    <incdepgraph>
+      <node id="32">
+        <label>stdlib.h</label>
+      </node>
+      <node id="31">
+        <label>logica.c</label>
+        <link refid="logica_8c"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>logica.h</label>
+        <link refid="logica_8h"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>interface.h</label>
+        <link refid="interface_8h"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>dados.h</label>
+        <link refid="dados_8h"/>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>listas.h</label>
+        <link refid="listas_8h"/>
+      </node>
+      <node id="33">
+        <label>time.h</label>
+      </node>
+      <node id="34">
+        <label>math.h</label>
+      </node>
+      <node id="36">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="logica_8c_1a1557de841beb611a13b0ee80baa7645b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
+        <definition>COORDENADA distancia_euclidiana</definition>
+        <argsstring>(ESTADO *e)</argsstring>
+        <name>distancia_euclidiana</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Escolhe a coordenada mais próxima da casa final do jogador atual. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Coordenada mais próxima </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logica.c" line="11" column="1" bodyfile="logica.c" bodystart="11" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="logica_8c_1a1bc4ea76d7d7ba7c510b10283208ae10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
+        <definition>COORDENADA get_coord_mais_prox</definition>
+        <argsstring>(LISTA casas_livres, int jogador_atual)</argsstring>
+        <name>get_coord_mais_prox</name>
+        <param>
+          <type><ref refid="structnodo" kindref="compound">LISTA</ref></type>
+          <declname>casas_livres</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>jogador_atual</declname>
+        </param>
+        <briefdescription>
+<para>Escolhe a coordenada mais próxima da casa final do jogador atual. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>casas_livres</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lista de casas livres em volta do jogador </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>jogador_atual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Número do jogador atual </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Coordenada mais próxima </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logica.c" line="27" column="1" bodyfile="logica.c" bodystart="27" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="logica_8c_1a677c0f4d7f93c14c0ba13b1b33f2def4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double calcula_distancia</definition>
+        <argsstring>(COORDENADA c, int jogador_atual)</argsstring>
+        <name>calcula_distancia</name>
+        <param>
+          <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>jogador_atual</declname>
+        </param>
+        <briefdescription>
+<para>Calcula a distância entre uma casa e a casa final do jogador atual. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A coordenada </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>jogador_atual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Número do jogador atual </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A distância </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logica.c" line="53" column="1" bodyfile="logica.c" bodystart="53" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="logica_8c_1a6c3a8c65de402405bfdae0c6d096d272" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
+        <definition>COORDENADA escolha_aleatoria</definition>
+        <argsstring>(ESTADO *e)</argsstring>
+        <name>escolha_aleatoria</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Escolhe uma CASA livre na vizinhança da peça branca. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Coordenada aleatória </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logica.c" line="69" column="1" bodyfile="logica.c" bodystart="69" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="logica_8c_1aedba38478f4e31a22bc0aff5e185b18e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structnodo" kindref="compound">LISTA</ref></type>
+        <definition>LISTA armaneza_pos_viz</definition>
+        <argsstring>(ESTADO *e, COORDENADA coord)</argsstring>
+        <name>armaneza_pos_viz</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
+          <declname>coord</declname>
+        </param>
+        <briefdescription>
+<para>Verifica se as casas em volta da peça branca estão livres. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>coord</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para a coordenada </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Lista com as casas livres </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logica.c" line="94" column="1" bodyfile="logica.c" bodystart="94" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="logica_8c_1ae501f2a107d637dabc7371cabc4b17d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref> *</type>
+        <definition>COORDENADA* duplica_coordenada</definition>
+        <argsstring>(COORDENADA c)</argsstring>
+        <name>duplica_coordenada</name>
+        <param>
+          <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Cria uma cópia de uma coordenada. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coordenada a ser copiada </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Apontador para a coordenada criada </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logica.c" line="128" column="1" bodyfile="logica.c" bodystart="128" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="logica_8c_1a83d887ddf545241657c8bd685a3b676c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int pertence_as_jogadas</definition>
+        <argsstring>(ESTADO *e, COORDENADA coord, int i)</argsstring>
+        <name>pertence_as_jogadas</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
+          <declname>coord</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Verifica se uma coordenada pertence ao arreio de jogadas. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>coord</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para a coordenada </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>O índice do arreio </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Valor 1 se pertencer ao arreio, 0 caso contrário </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logica.c" line="140" column="1" bodyfile="logica.c" bodystart="140" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="logica_8c_1a521891400dc2dccd429b8fef56aee405" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int validar_vitoria</definition>
+        <argsstring>(ESTADO *e, COORDENADA coord)</argsstring>
+        <name>validar_vitoria</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
+          <declname>coord</declname>
+        </param>
+        <briefdescription>
+<para>Verifica se algum dos jogadores ganhou o jogo. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>coord</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para a coordenada </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Valor 1 ou 2 consoante o jogador vencedor </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logica.c" line="158" column="1" bodyfile="logica.c" bodystart="158" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="logica_8c_1a609d7d1c918d33c9acdc2c247c87f7a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int validar_jogada</definition>
+        <argsstring>(ESTADO *e, COORDENADA coord)</argsstring>
+        <name>validar_jogada</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
+          <declname>coord</declname>
+        </param>
+        <briefdescription>
+<para>Verifica a jogada é válida ou não. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>coord</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para a coordenada </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Valor 1 se a jogada for válida, 0 caso contrário </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logica.c" line="230" column="1" bodyfile="logica.c" bodystart="230" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="logica_8c_1a26293fb262963585f16944baa50dd524" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int jogar</definition>
+        <argsstring>(ESTADO *e, COORDENADA coord)</argsstring>
+        <name>jogar</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
+          <declname>c</declname>
+          <defname>coord</defname>
+        </param>
+        <briefdescription>
+<para>Dá continuidade ao jogo. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>coord</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para a coordenada </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Valor 0 se o jogo acabar, 1 caso contrário </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logica.c" line="252" column="1" bodyfile="logica.c" bodystart="252" bodyend="276"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//LOGICA<sp/>DO<sp/>PROGRAMA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dados_8h" kindref="compound">dados.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="interface_8h" kindref="compound">interface.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="listas_8h" kindref="compound">listas.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="logica_8h" kindref="compound">logica.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="logica_8h_1a1557de841beb611a13b0ee80baa7645b" kindref="member">distancia_euclidiana</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e){</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Posição<sp/>da<sp/>peça<sp/>branca</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>pos_atual<sp/>=<sp/><ref refid="dados_8h_1a40555aff97afc67bd1866f2785111310" kindref="member">obter_ultima_jogada</ref>(e);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Lista<sp/>com<sp/>as<sp/>posições<sp/>vizinhas<sp/>da<sp/>peça<sp/>branca<sp/>livres</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structnodo" kindref="compound">LISTA</ref><sp/>pos_vizinhas<sp/>=<sp/><ref refid="logica_8h_1aedba38478f4e31a22bc0aff5e185b18e" kindref="member">armaneza_pos_viz</ref>(e,<sp/>pos_atual);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Jogador<sp/>atual</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>jog_atual<sp/>=<sp/><ref refid="dados_8h_1acc6c25533188a99cb69c12e7f2c406ef" kindref="member">obter_jogador_atual</ref>(e);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>coordenada_mais_proxima<sp/>=<sp/><ref refid="logica_8h_1a1bc4ea76d7d7ba7c510b10283208ae10" kindref="member">get_coord_mais_prox</ref>(pos_vizinhas,<sp/>jog_atual);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>coordenada_mais_proxima;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="logica_8h_1a1bc4ea76d7d7ba7c510b10283208ae10" kindref="member">get_coord_mais_prox</ref>(<ref refid="structnodo" kindref="compound">LISTA</ref><sp/>casas_livres,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>jogador_atual){</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>menor_dist<sp/>=<sp/>100;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>coord_mais_proxima;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Enquanto<sp/>houver<sp/>casas<sp/>livres<sp/>à<sp/>volta<sp/>do<sp/>jogador</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="listas_8h_1a4c10928f7acaa4e3de3760cea0dfd9c0" kindref="member">lista_esta_vazia</ref>(casas_livres))<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Casa<sp/>livre</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>*c<sp/>=<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>*)<sp/><ref refid="listas_8h_1abfcb205f3eb670157be0d1221021714b" kindref="member">devolve_cabeca</ref>(casas_livres);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Distancia<sp/>entre<sp/>a<sp/>casa<sp/>em<sp/>questao<sp/>e<sp/>a<sp/>casa<sp/>vencedora<sp/>do<sp/>jogador<sp/>atual</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist<sp/>=<sp/><ref refid="logica_8h_1a677c0f4d7f93c14c0ba13b1b33f2def4" kindref="member">calcula_distancia</ref>(*c,<sp/>jogador_atual);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>da<sp/>lista<sp/>de<sp/>casas<sp/>livres</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>casas_livres<sp/>=<sp/><ref refid="listas_8h_1ad9380152361127432c55c1c6067e05ae" kindref="member">proximo</ref>(casas_livres);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>da<sp/>coordenada<sp/>mais<sp/>proxima</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dist<sp/>&lt;<sp/>menor_dist){</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>menor_dist<sp/>=<sp/>dist;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>coord_mais_proxima<sp/>=<sp/>*c;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>coord_mais_proxima;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="logica_8h_1a677c0f4d7f93c14c0ba13b1b33f2def4" kindref="member">calcula_distancia</ref>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>c,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>jogador_atual){</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>coluna<sp/>=<sp/><ref refid="dados_8h_1a48396e4361cc50e41324704188d59017" kindref="member">obter_coluna</ref>(c);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>linha<sp/>=<sp/><ref refid="dados_8h_1a785edf5aab68560d399464b12800845b" kindref="member">obter_linha</ref>(c);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(jogador_atual<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Distancia<sp/>entre<sp/>a<sp/>casa<sp/>de<sp/>coordenada<sp/>c<sp/>e<sp/>a<sp/>casa<sp/>&quot;1&quot;<sp/>de<sp/>coordenada<sp/>{0,0}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dist<sp/>=<sp/>sqrt(pow(coluna,<sp/>2)<sp/>+<sp/>pow(linha,<sp/>2));</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Distancia<sp/>entre<sp/>a<sp/>casa<sp/>de<sp/>coordenada<sp/>c<sp/>e<sp/>a<sp/>casa<sp/>&quot;2&quot;<sp/>de<sp/>coordenada<sp/>{7,7}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dist<sp/>=<sp/>sqrt(pow(7<sp/>-<sp/>coluna,<sp/>2)<sp/>+<sp/>pow(7<sp/>-<sp/>linha,<sp/>2));</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dist;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="logica_8h_1a6c3a8c65de402405bfdae0c6d096d272" kindref="member">escolha_aleatoria</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e){</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Posição<sp/>da<sp/>peça<sp/>branca</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>pos_atual<sp/>=<sp/><ref refid="dados_8h_1a40555aff97afc67bd1866f2785111310" kindref="member">obter_ultima_jogada</ref>(e);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Lista<sp/>com<sp/>as<sp/>posições<sp/>vizinhas<sp/>da<sp/>peça<sp/>branca<sp/>livres</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structnodo" kindref="compound">LISTA</ref><sp/>pos_vizinhas<sp/>=<sp/><ref refid="logica_8h_1aedba38478f4e31a22bc0aff5e185b18e" kindref="member">armaneza_pos_viz</ref>(e,<sp/>pos_atual);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>comp<sp/>=<sp/><ref refid="listas_8h_1a610f56100f6d9a8c285e83aa35dc6388" kindref="member">length</ref>(pos_vizinhas);</highlight><highlight class="comment">//Numero<sp/>de<sp/>casa<sp/>livres</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Indice<sp/>aleatorio<sp/>para<sp/>a<sp/>escolha<sp/>da<sp/>coordenada</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>srandom(time(NULL));</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>(rand()<sp/>%<sp/>comp);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Avança<sp/>na<sp/>lista<sp/>ate<sp/>ao<sp/>indice<sp/>criado</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(i<sp/>&gt;<sp/>0){</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos_vizinhas<sp/>=<sp/><ref refid="listas_8h_1ad9380152361127432c55c1c6067e05ae" kindref="member">proximo</ref>(pos_vizinhas);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i--;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>*c<sp/>=<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>*)<sp/><ref refid="listas_8h_1abfcb205f3eb670157be0d1221021714b" kindref="member">devolve_cabeca</ref>(pos_vizinhas);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*c;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><ref refid="structnodo" kindref="compound">LISTA</ref><sp/><ref refid="logica_8h_1aedba38478f4e31a22bc0aff5e185b18e" kindref="member">armaneza_pos_viz</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>coord){</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structnodo" kindref="compound">LISTA</ref><sp/>pos_vizinhas<sp/>=<sp/><ref refid="listas_8h_1ae3b99323b6f8f35d80bb69ff1a27985e" kindref="member">criar_lista</ref>();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>coluna<sp/>=<sp/><ref refid="dados_8h_1a48396e4361cc50e41324704188d59017" kindref="member">obter_coluna</ref>(coord);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>linha<sp/>=<sp/><ref refid="dados_8h_1a785edf5aab68560d399464b12800845b" kindref="member">obter_linha</ref>(coord);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>c<sp/>=<sp/>coluna,<sp/>l<sp/>=<sp/>linha;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>3<sp/>casas<sp/>de<sp/>cima<sp/>da<sp/>peça<sp/>branca</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>*c1<sp/>=<sp/><ref refid="logica_8h_1ae501f2a107d637dabc7371cabc4b17d7" kindref="member">duplica_coordenada</ref>((<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{c-1,l+1});</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>*c2<sp/>=<sp/><ref refid="logica_8h_1ae501f2a107d637dabc7371cabc4b17d7" kindref="member">duplica_coordenada</ref>((<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{c,l+1});</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>*c3<sp/>=<sp/><ref refid="logica_8h_1ae501f2a107d637dabc7371cabc4b17d7" kindref="member">duplica_coordenada</ref>((<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{c+1,l+1});</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>*c1))<sp/>pos_vizinhas<sp/>=<sp/><ref refid="listas_8h_1a37ba5fc3cfddb6bc94d4b54b00bc696e" kindref="member">insere_cabeca</ref>(pos_vizinhas,<sp/>c1);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>*c2))<sp/>pos_vizinhas<sp/>=<sp/><ref refid="listas_8h_1a37ba5fc3cfddb6bc94d4b54b00bc696e" kindref="member">insere_cabeca</ref>(pos_vizinhas,<sp/>c2);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>*c3))<sp/>pos_vizinhas<sp/>=<sp/><ref refid="listas_8h_1a37ba5fc3cfddb6bc94d4b54b00bc696e" kindref="member">insere_cabeca</ref>(pos_vizinhas,<sp/>c3);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Casa<sp/>do<sp/>lado<sp/>direito<sp/>da<sp/>peça<sp/>branca</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>*c4<sp/>=<sp/><ref refid="logica_8h_1ae501f2a107d637dabc7371cabc4b17d7" kindref="member">duplica_coordenada</ref>((<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{c+1,l});</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>*c4))<sp/>pos_vizinhas<sp/>=<sp/><ref refid="listas_8h_1a37ba5fc3cfddb6bc94d4b54b00bc696e" kindref="member">insere_cabeca</ref>(pos_vizinhas,<sp/>c4);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>3<sp/>casas<sp/>de<sp/>baixo<sp/>da<sp/>peça<sp/>branca</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>*c5<sp/>=<sp/><ref refid="logica_8h_1ae501f2a107d637dabc7371cabc4b17d7" kindref="member">duplica_coordenada</ref>((<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{c+1,l-1});</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>*c6<sp/>=<sp/><ref refid="logica_8h_1ae501f2a107d637dabc7371cabc4b17d7" kindref="member">duplica_coordenada</ref>((<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{c,l-1});</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>*c7<sp/>=<sp/><ref refid="logica_8h_1ae501f2a107d637dabc7371cabc4b17d7" kindref="member">duplica_coordenada</ref>((<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{c-1,l-1});</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>*c5))<sp/>pos_vizinhas<sp/>=<sp/><ref refid="listas_8h_1a37ba5fc3cfddb6bc94d4b54b00bc696e" kindref="member">insere_cabeca</ref>(pos_vizinhas,<sp/>c5);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>*c6))<sp/>pos_vizinhas<sp/>=<sp/><ref refid="listas_8h_1a37ba5fc3cfddb6bc94d4b54b00bc696e" kindref="member">insere_cabeca</ref>(pos_vizinhas,<sp/>c6);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>*c7))<sp/>pos_vizinhas<sp/>=<sp/><ref refid="listas_8h_1a37ba5fc3cfddb6bc94d4b54b00bc696e" kindref="member">insere_cabeca</ref>(pos_vizinhas,<sp/>c7);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Casa<sp/>do<sp/>lado<sp/>esquerdo<sp/>da<sp/>peça<sp/>branca</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>*c8<sp/>=<sp/><ref refid="logica_8h_1ae501f2a107d637dabc7371cabc4b17d7" kindref="member">duplica_coordenada</ref>((<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{c-1,l});</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>*c8))<sp/>pos_vizinhas<sp/>=<sp/><ref refid="listas_8h_1a37ba5fc3cfddb6bc94d4b54b00bc696e" kindref="member">insere_cabeca</ref>(pos_vizinhas,<sp/>c8);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pos_vizinhas;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>*<sp/><ref refid="logica_8h_1ae501f2a107d637dabc7371cabc4b17d7" kindref="member">duplica_coordenada</ref>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>c){</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>*c_clone<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>));</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>coluna_c<sp/>=<sp/><ref refid="dados_8h_1a48396e4361cc50e41324704188d59017" kindref="member">obter_coluna</ref>(c);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>linha_c<sp/>=<sp/><ref refid="dados_8h_1a785edf5aab68560d399464b12800845b" kindref="member">obter_linha</ref>(c);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a16db4087c6ee20c39ebd8b8bceec1060" kindref="member">set_coluna</ref>(c_clone,<sp/>coluna_c);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a8e524695694a29ef3cb8099705f3d123" kindref="member">set_linha</ref>(c_clone,<sp/>linha_c);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>c_clone;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="logica_8h_1a83d887ddf545241657c8bd685a3b676c" kindref="member">pertence_as_jogadas</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>coord,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i){</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x;<sp/></highlight><highlight class="comment">//Variavel<sp/>para<sp/>o<sp/>controlo<sp/>do<sp/>indice<sp/>da<sp/>lista<sp/>de<sp/>jogadas</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Percorre<sp/>a<sp/>lista<sp/>de<sp/>jogadas<sp/>ate<sp/>ao<sp/>indice<sp/>x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(x<sp/>=<sp/>0;<sp/>x<sp/>&lt;<sp/>i;<sp/>x++){</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>casa_jogador1<sp/>=<sp/><ref refid="dados_8h_1ae80a416852553bb00cc8e5ed26019681" kindref="member">obter_coord</ref>(e,<sp/>x,<sp/>1);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>casa_jogador2<sp/>=<sp/><ref refid="dados_8h_1ae80a416852553bb00cc8e5ed26019681" kindref="member">obter_coord</ref>(e,<sp/>x,<sp/>2);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Se<sp/>a<sp/>coordenada<sp/>pertencer<sp/>a<sp/>lista<sp/>a<sp/>variavel<sp/>result<sp/>é<sp/>alterada<sp/>para<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="dados_8h_1a0a792dafa20e5ee83712f5e9691b03b9" kindref="member">compara_coordenadas</ref>(coord,<sp/>casa_jogador1)<sp/>||</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a0a792dafa20e5ee83712f5e9691b03b9" kindref="member">compara_coordenadas</ref>(coord,<sp/>casa_jogador2))</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="logica_8h_1a521891400dc2dccd429b8fef56aee405" kindref="member">validar_vitoria</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>coord){</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>coluna_jogada<sp/>=<sp/><ref refid="dados_8h_1a48396e4361cc50e41324704188d59017" kindref="member">obter_coluna</ref>(coord);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>linha_jogada<sp/>=<sp/><ref refid="dados_8h_1a785edf5aab68560d399464b12800845b" kindref="member">obter_linha</ref>(coord);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>jogador_atual<sp/>=<sp/><ref refid="dados_8h_1acc6c25533188a99cb69c12e7f2c406ef" kindref="member">obter_jogador_atual</ref>(e);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(coluna_jogada<sp/>==<sp/>7<sp/>&amp;&amp;<sp/>linha_jogada<sp/>==<sp/>7)<sp/>result<sp/>=<sp/>2;<sp/></highlight><highlight class="comment">//Canto<sp/>superior<sp/>direito</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(coluna_jogada<sp/>==<sp/>0<sp/>&amp;&amp;<sp/>linha_jogada<sp/>==<sp/>0)<sp/>result<sp/>=<sp/>1;<sp/></highlight><highlight class="comment">//Canto<sp/>inferior<sp/>esquerdo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="comment">//Lado<sp/>superior<sp/>do<sp/>tabuleiro</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(linha_jogada<sp/>==<sp/>7)<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(coluna_jogada<sp/>==<sp/>0</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/>+<sp/>1,<sp/>linha_jogada})<sp/>!=<sp/>1</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/>+<sp/>1,<sp/>linha_jogada<sp/>-<sp/>1})<sp/>!=<sp/>1</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada,<sp/>linha_jogada<sp/>-<sp/>1})<sp/>!=<sp/>1)</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>jogador_atual;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/>+<sp/>1,<sp/>linha_jogada<sp/><sp/><sp/><sp/>})<sp/>!=<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/>+<sp/>1,<sp/>linha_jogada<sp/>-<sp/>1})<sp/>!=<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/><sp/><sp/><sp/>,<sp/>linha_jogada<sp/>-<sp/>1})<sp/>!=<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/>-<sp/>1,<sp/>linha_jogada<sp/>-<sp/>1})<sp/>!=<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/>-<sp/>1,<sp/>linha_jogada<sp/><sp/><sp/><sp/>})<sp/>!=<sp/>1)</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>jogador_atual;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="comment">//Lado<sp/>inferior<sp/>do<sp/>tabuleiro</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(linha_jogada<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(coluna_jogada<sp/>==<sp/>7<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/>-<sp/>1,<sp/>linha_jogada})<sp/>!=<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/>-<sp/>1,<sp/>linha_jogada<sp/>+<sp/>1})<sp/>!=<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada,<sp/>linha_jogada<sp/>+<sp/>1})<sp/>!=<sp/>1)</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>jogador_atual;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/>+<sp/>1,<sp/>linha_jogada<sp/><sp/><sp/><sp/>})<sp/>!=<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/>+<sp/>1,<sp/>linha_jogada<sp/>+<sp/>1})<sp/>!=<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/><sp/><sp/><sp/>,<sp/>linha_jogada<sp/>+<sp/>1})<sp/>!=<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/>-<sp/>1,<sp/>linha_jogada<sp/>+<sp/>1})<sp/>!=<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/>-<sp/>1,<sp/>linha_jogada<sp/><sp/><sp/><sp/>})<sp/>!=<sp/>1)</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>jogador_atual;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="comment">//Lado<sp/>esquerdo<sp/>do<sp/>tabuleiro</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(coluna_jogada<sp/>==<sp/>0<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/>+<sp/>1,<sp/>linha_jogada<sp/><sp/><sp/><sp/>})<sp/>!=<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/>+<sp/>1,<sp/>linha_jogada<sp/>+<sp/>1})<sp/>!=<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/><sp/><sp/><sp/>,<sp/>linha_jogada<sp/>+<sp/>1})<sp/>!=<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/>+<sp/>1,<sp/>linha_jogada<sp/>-<sp/>1})<sp/>!=<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/><sp/><sp/><sp/>,<sp/>linha_jogada<sp/>-<sp/>1})<sp/>!=<sp/>1)</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>jogador_atual;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="comment">//Lado<sp/>direito<sp/>do<sp/>tabuleiro</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(coluna_jogada<sp/>==<sp/>7<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/>-<sp/>1,<sp/>linha_jogada<sp/><sp/><sp/><sp/>})<sp/>!=<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/>-<sp/>1,<sp/>linha_jogada<sp/>+<sp/>1})<sp/>!=<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/><sp/><sp/><sp/>,<sp/>linha_jogada<sp/>+<sp/>1})<sp/>!=<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/>-<sp/>1,<sp/>linha_jogada<sp/>-<sp/>1})<sp/>!=<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/><sp/><sp/><sp/>,<sp/>linha_jogada<sp/>-<sp/>1})<sp/>!=<sp/>1)</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>jogador_atual;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="comment">//Caso<sp/>em<sp/>que<sp/>o<sp/>jogador<sp/>fica<sp/>rodeado<sp/>de<sp/>pecas<sp/>pretas<sp/>no<sp/>&quot;meio&quot;<sp/>do<sp/>tabuleiro</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/><sp/><sp/><sp/>,<sp/>linha_jogada<sp/>+<sp/>1})<sp/>!=<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/>+<sp/>1,<sp/>linha_jogada<sp/>+<sp/>1})<sp/>!=<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/>+<sp/>1,<sp/>linha_jogada<sp/><sp/><sp/><sp/>})<sp/>!=<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/>+<sp/>1,<sp/>linha_jogada<sp/>-<sp/>1})<sp/>!=<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/><sp/><sp/><sp/>,<sp/>linha_jogada<sp/>-<sp/>1})<sp/>!=<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/>-<sp/>1,<sp/>linha_jogada<sp/>-<sp/>1})<sp/>!=<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/>-<sp/>1,<sp/>linha_jogada<sp/><sp/><sp/><sp/>})<sp/>!=<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>)<sp/>{coluna_jogada<sp/>-<sp/>1,<sp/>linha_jogada<sp/>+<sp/>1})<sp/>!=<sp/>1)</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>jogador_atual;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="logica_8h_1a609d7d1c918d33c9acdc2c247c87f7a0" kindref="member">validar_jogada</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>coord){</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>coluna_atual<sp/>=<sp/><ref refid="dados_8h_1a48396e4361cc50e41324704188d59017" kindref="member">obter_coluna</ref>(<ref refid="dados_8h_1a40555aff97afc67bd1866f2785111310" kindref="member">obter_ultima_jogada</ref>(e));</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>linha_atual<sp/>=<sp/><ref refid="dados_8h_1a785edf5aab68560d399464b12800845b" kindref="member">obter_linha</ref>(<ref refid="dados_8h_1a40555aff97afc67bd1866f2785111310" kindref="member">obter_ultima_jogada</ref>(e));</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>coluna_jogada<sp/>=<sp/><ref refid="dados_8h_1a48396e4361cc50e41324704188d59017" kindref="member">obter_coluna</ref>(coord);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>linha_jogada<sp/>=<sp/><ref refid="dados_8h_1a785edf5aab68560d399464b12800845b" kindref="member">obter_linha</ref>(coord);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/>y,<sp/>z;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Verifica<sp/>se<sp/>o<sp/>jogador<sp/>está<sp/>a<sp/>jogar<sp/>para<sp/>a<sp/>vizinhaça<sp/>da<sp/>peça<sp/>atual</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>x<sp/>=<sp/>abs(coluna_atual<sp/>-<sp/>coluna_jogada)<sp/>&lt;=<sp/>1<sp/>&amp;&amp;<sp/>abs(linha_atual<sp/>-<sp/>linha_jogada)<sp/>&lt;=<sp/>1;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Verifica<sp/>se<sp/>a<sp/>peça<sp/>para<sp/>a<sp/>qual<sp/>o<sp/>jogador<sp/>pretende<sp/>jogar<sp/>esta<sp/>livre<sp/>(VAZIO)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>y<sp/>=<sp/><ref refid="dados_8h_1a36d9df60299da8db1fb0827ae77e6695" kindref="member">casa_livre</ref>(e,<sp/>coord);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Verifica<sp/>se<sp/>a<sp/>coordenada<sp/>jogada<sp/>pelo<sp/>jogador<sp/>não<sp/>coincide<sp/>com<sp/>a<sp/>peça<sp/>atual</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>z<sp/>=<sp/>coluna_atual<sp/>!=<sp/>coluna_jogada<sp/>||<sp/>linha_atual<sp/>!=<sp/>linha_jogada;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(x<sp/>&amp;&amp;<sp/>y<sp/>&amp;&amp;<sp/>z)<sp/>result<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="logica_8h_1ac313d7e553b1e2b5f266acb9bfff8141" kindref="member">jogar</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>coord){</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>valida<sp/>=<sp/><ref refid="logica_8h_1a609d7d1c918d33c9acdc2c247c87f7a0" kindref="member">validar_jogada</ref>(e,coord);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>vitoria<sp/>=<sp/><ref refid="logica_8h_1a521891400dc2dccd429b8fef56aee405" kindref="member">validar_vitoria</ref>(e,coord);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>peca_branca<sp/>=<sp/><ref refid="dados_8h_1a40555aff97afc67bd1866f2785111310" kindref="member">obter_ultima_jogada</ref>(e);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Verifica<sp/>se<sp/>a<sp/>jogada<sp/>é<sp/>valida<sp/>ou<sp/>não</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(valida)<sp/>{<sp/><ref refid="dados_8h_1a63134fe075ba2e7aba198be384bc5294" kindref="member">atualiza_jogadas</ref>(e,<sp/>coord);<sp/></highlight><highlight class="comment">//Controlo<sp/>da<sp/>informacao<sp/>sobre<sp/>as<sp/>jogadas</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1aff9231a11de9fa8b14ad0c2374c822cc" kindref="member">atualiza_jogador_atual</ref>(e);<sp/></highlight><highlight class="comment">//Troca<sp/>de<sp/>jogador</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a431f39eaaac3666738b773a8ad91fde9" kindref="member">atualiza_num_jogadas</ref>(e);<sp/></highlight><highlight class="comment">//Controlo<sp/>do<sp/>numero<sp/>de<sp/>jogadas</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a7478682b7af80f39eb9df80476ac3820" kindref="member">atualiza_casa</ref>(e,<sp/>peca_branca,<sp/>PRETA);<sp/></highlight><highlight class="comment">//A<sp/>peca<sp/>que<sp/>antes<sp/>era<sp/>BRANCA<sp/>passa<sp/>a<sp/>ser<sp/>PRETA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a7478682b7af80f39eb9df80476ac3820" kindref="member">atualiza_casa</ref>(e,<sp/>coord,<sp/>BRANCA);<sp/></highlight><highlight class="comment">//A<sp/>casa<sp/>onde<sp/>o<sp/>jogador<sp/>joga<sp/>passa<sp/>a<sp/>ser<sp/>BRANCA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dados_8h_1aad23a99d828417c48925116ab9f3f417" kindref="member">atualiza_ultima_jogada</ref>(e,<sp/>coord);<sp/></highlight><highlight class="comment">//A<sp/>ultima<sp/>jogada<sp/>passa<sp/>a<sp/>ser<sp/>a<sp/>jogada<sp/>acabada<sp/>de<sp/>efetuar</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Caso<sp/>nao<sp/>seja<sp/>valida<sp/>mostra<sp/>mensagem<sp/>de<sp/>erro</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/><ref refid="interface_8h_1a2fb0566cfaa9cdfd5acd6f79a7806828" kindref="member">mostrar_erro</ref>(JOGADA_INVALIDA);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Verifica<sp/>se<sp/>a<sp/>jogada<sp/>é<sp/>valida<sp/>e<sp/>se<sp/>um<sp/>dos<sp/>jogadores<sp/>ganhou<sp/>o<sp/>jogo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(valida<sp/>&amp;&amp;<sp/>vitoria<sp/>!=<sp/>0){</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interface_8h_1aa0b6c1689e60ac852a73d67e066c1df5" kindref="member">mostrar_tabuleiro</ref>(e);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interface_8h_1af2806892e401a01a7bc7f84cd65e4c99" kindref="member">mostrar_vitoria</ref>(vitoria);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="logica.c"/>
+  </compounddef>
+</doxygen>
